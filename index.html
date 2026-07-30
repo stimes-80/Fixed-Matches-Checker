@@ -211,15 +211,15 @@
                                         <div class="flex items-center gap-2.5 pb-2.5 border-b border-slate-100">
                                             <i class="fa-solid fa-trophy text-blue-600 text-sm"></i>
                                             <div>
-                                                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold leading-none">July 29, 2026</p>
-                                                <p class="text-xs font-extrabold text-slate-800 mt-1">Europe: Champions League Qual.</p>
+                                                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold leading-none">July 30, 2026</p>
+                                                <p class="text-xs font-extrabold text-slate-800 mt-1">Europe: Europa League Qual.</p>
                                             </div>
                                         </div>
 
                                         <!-- Match details -->
                                         <div class="pb-3 border-b border-slate-100">
                                             <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold leading-none mb-1">Featured Event</p>
-                                            <p class="text-lg font-black tracking-tight text-slate-900">Slovan Bratislava vs Ibera 1999</p>
+                                            <p class="text-lg font-black tracking-tight text-slate-900">Benfica vs St. Gallen</p>
                                         </div>
 
                                         <!-- Prediction button -->
@@ -664,26 +664,26 @@
                         <div class="space-y-6 mt-2 sm:mt-0">
                             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                                 <div class="text-blue-600 text-xs font-mono-custom font-bold uppercase tracking-wide flex items-center gap-2">
-                                    <i class="fa-solid fa-trophy"></i> Europe: Champions League Qualification
+                                    <i class="fa-solid fa-trophy"></i> Europe: Europa League Qualification
                                 </div>
                                 <div class="text-slate-700 text-xs font-bold font-mono-custom flex items-center gap-1.5 bg-slate-100 px-3 py-1 rounded-lg border border-slate-200">
-                                    <i class="fa-regular fa-calendar-days text-blue-600"></i> July 27, 2026
+                                    <i class="fa-regular fa-calendar-days text-blue-600"></i> July 30, 2026
                                 </div>
                             </div>
                             
                             <div>
                                 <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">Featured Fixture</span>
-                                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">Slovan Bratislava vs Ibera 1999</h2>
+                                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">Benfica (POR) v St. Gallen (SUI)</h2>
                             </div>
                             
                             <div class="grid sm:grid-cols-2 gap-4 bg-slate-50 rounded-2xl p-5 border border-slate-200">
                                 <div class="space-y-1">
                                     <span class="text-slate-500 text-xs font-bold uppercase tracking-wider block">PICK</span>
-                                    <span class="font-black text-blue-600 text-lg sm:text-xl block">Slovan Bratislava (SVK)</span>
+                                    <span class="font-black text-blue-600 text-lg sm:text-xl block">Benfica (POR) AH-1</span>
                                 </div>
                                 <div class="space-y-1 sm:border-l sm:border-slate-200 sm:pl-5">
                                     <span class="text-slate-500 text-xs font-bold uppercase tracking-wider block">ODDS</span>
-                                    <span class="font-mono-custom font-black text-blue-600 text-lg sm:text-xl block" id="oddsValue1">1.33</span>
+                                    <span class="font-mono-custom font-black text-blue-600 text-lg sm:text-xl block" id="oddsValue1">1.29</span>
                                 </div>
                                 <div class="sm:col-span-2 border-t border-slate-200 pt-3 flex flex-wrap justify-between items-center text-xs text-slate-600 gap-2">
                                     <span class="font-semibold"><i class="fa-solid fa-calculator text-blue-600 mr-1.5"></i> Model Method: Poisson Probability Distribution</span>
@@ -1015,6 +1015,7 @@
 
         // Historical tips data array
         const tipsData = [
+            { date: "July 29, 2026", league: "Europe: Champions League Qualification", match: "Slovan Bratislava vs Ibera 1999", market: "Match Winner (1)", pick: "Slovan Bratislava", result: "1:1", odds: 1.33, status: "LOST" },
             { date: "July 27, 2026", league: "Bulgaria: efbet league", match: "Dunav Ruse vs Ludogorets", market: "Match Winner (2)", pick: "Ludogorets", result: "0:2", odds: 1.33, status: "WON" },
             { date: "July 26, 2026", league: "Czech Republic: Chance Liga", match: "Slavia Prague vs Slovacko", market: "Match Winner (1)", pick: "Slavia Prague", result: "5:1", odds: 1.20, status: "WON" },
             { date: "July 25, 2026", league: "Finland: Ykkonen", match: "Rovaniemi vs JJK Jyvaskyla", market: "Match Winner (1)", pick: "Rovaniemi", result: "4:0", odds: 1.75, status: "WON" },
@@ -1349,7 +1350,7 @@
 
         function renderOddsValues() {
             const oddsVal1 = document.getElementById('oddsValue1');
-            if (oddsVal1) oddsVal1.textContent = formatOdds(1.33);
+            if (oddsVal1) oddsVal1.textContent = formatOdds(1.29);
 
             const archiveBody = document.getElementById('tableArchiveBody');
             if (archiveBody) {
