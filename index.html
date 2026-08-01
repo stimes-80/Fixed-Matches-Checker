@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT86WE7ZME"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-HT86WE7ZME');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="site-title">Fixed Matches - Checker - Exposing Sports Fraud & Analytics</title>
     
-   <!-- Vector SVG Favicon: Anti-Fraud Verification Lens & Checkmark -->
+    <!-- Vector SVG Favicon: Anti-Fraud Verification Lens & Checkmark -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%230a0f1d'/%3E%3Cpath fill='none' stroke='%230866FF' stroke-width='42' d='M330 330l95 95' stroke-linecap='round'/%3E%3Ccircle cx='225' cy='225' r='135' fill='none' stroke='%230866FF' stroke-width='38'/%3E%3Cpath fill='none' stroke='%2300FF87' stroke-width='38' stroke-linecap='round' stroke-linejoin='round' d='M160 225l45 45 85-85'/%3E%3C/svg%3E">
-
-    <!-- Tailwind CSS -->
-<!-- ... existing code ... -->
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -211,15 +199,15 @@
                                         <div class="flex items-center gap-2.5 pb-2.5 border-b border-slate-100">
                                             <i class="fa-solid fa-trophy text-blue-600 text-sm"></i>
                                             <div>
-                                                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold leading-none">July 30, 2026</p>
-                                                <p class="text-xs font-extrabold text-slate-800 mt-1">Europe: Europa League Qual.</p>
+                                                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold leading-none">August 02, 2026</p>
+                                                <p class="text-xs font-extrabold text-slate-800 mt-1">Serbia: Mozzart Bet Super Liga</p>
                                             </div>
                                         </div>
 
                                         <!-- Match details -->
                                         <div class="pb-3 border-b border-slate-100">
                                             <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold leading-none mb-1">Featured Event</p>
-                                            <p class="text-lg font-black tracking-tight text-slate-900">Benfica vs St. Gallen</p>
+                                            <p class="text-lg font-black tracking-tight text-slate-900">Partizan vs IMT Novi Beograd</p>
                                         </div>
 
                                         <!-- Prediction button -->
@@ -574,35 +562,121 @@
 
                             <div class="p-5 bg-[#151e36] rounded-2xl border border-slate-700 space-y-4">
                                 <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
-                                    To secure your digital copy of <strong class="text-white font-extrabold">THE €30K WINNING BET STRATEGY</strong>, email our desk directly. State your preferred cryptocurrency for payment (BTC, ETH, or USDT).
+                                    To secure your digital copy of <strong class="text-white font-extrabold">THE €30K WINNING BET STRATEGY</strong>, submit a request via the contact form below or reach out directly on WhatsApp. Select your preferred cryptocurrency for payment (BTC, ETH, or USDT).
                                 </p>
 
-                                <!-- Email Highlight Box -->
-                                <div class="p-4 bg-slate-900 rounded-xl border-2 border-blue-600 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg">
-                                    <div class="flex items-center gap-3 w-full">
-                                        <div class="bg-blue-600 text-white p-3 rounded-xl text-lg shrink-0 font-black">
-                                            <i class="fa-solid fa-envelope"></i>
-                                        </div>
-                                        <div class="overflow-hidden">
-                                            <span class="text-[10px] uppercase font-black text-emerald-400 block tracking-wider">Official Orders Email</span>
-                                            <a href="mailto:fmcotto10@gmail.com" class="text-base sm:text-lg font-black text-white font-mono-custom hover:text-emerald-400 transition-colors truncate block">fmcotto10@gmail.com</a>
+                                <!-- Contact Form -->
+                                <form id="blueprintOrderForm" onsubmit="handleOrderSubmit(event)" class="space-y-4 pt-1">
+                                    <input type="hidden" name="access_key" value="beed5147-b201-4be9-b1f0-cf7b5791bb7c">
+                                    <div>
+                                        <label for="orderEmail" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                                            1. Email Address <span class="text-emerald-400">*</span>
+                                        </label>
+                                        <div class="relative">
+                                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                                <i class="fa-solid fa-envelope text-xs"></i>
+                                            </span>
+                                            <input type="email" id="orderEmail" name="email" required placeholder="your.email@example.com"
+                                                class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 font-sans">
                                         </div>
                                     </div>
+
+                                    <div>
+                                        <label for="orderConfirmEmail" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                                            2. Confirm Email Address <span class="text-emerald-400">*</span>
+                                        </label>
+                                        <div class="relative">
+                                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                                <i class="fa-solid fa-envelope-circle-check text-xs"></i>
+                                            </span>
+                                            <input type="email" id="orderConfirmEmail" required placeholder="Re-enter your email address"
+                                                class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 font-sans">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label for="orderCrypto" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                                            3. Select Preferred Cryptocurrency <span class="text-emerald-400">*</span>
+                                        </label>
+                                        <div class="relative">
+                                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                                <i class="fa-solid fa-coins text-xs"></i>
+                                            </span>
+                                            <select id="orderCrypto" name="crypto_preference" required
+                                                class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 font-sans appearance-none cursor-pointer">
+                                                <option value="USDT (TRC20)">USDT (TRC20)</option>
+                                                <option value="Bitcoin (BTC)">Bitcoin (BTC)</option>
+                                                <option value="Ethereum (ETH)">Ethereum (ETH)</option>
+                                            </select>
+                                            <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+                                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div id="orderErrorMsg" class="hidden text-xs text-rose-400 font-bold bg-rose-950/50 border border-rose-800 p-3 rounded-xl flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-exclamation"></i> <span id="orderErrorText">Email addresses do not match!</span>
+                                    </div>
+
+                                    <button type="submit" id="orderSubmitBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 text-sm">
+                                        <i class="fa-solid fa-paper-plane"></i> Submit Order Request
+                                    </button>
+                                </form>
+
+                                <!-- OR Divider & WhatsApp Contact Card -->
+                                <div class="pt-2">
+                                    <div class="relative flex py-2 items-center">
+                                        <div class="flex-grow border-t border-slate-700"></div>
+                                        <span class="flex-shrink mx-3 text-slate-400 text-xs font-bold uppercase tracking-widest">Or Chat Directly</span>
+                                        <div class="flex-grow border-t border-slate-700"></div>
+                                    </div>
+
+                                    <!-- WhatsApp Contact Card -->
+                                    <a href="https://wa.me/441892710291" target="_blank" rel="noopener noreferrer" class="p-4 bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-500/50 rounded-2xl flex items-center justify-between gap-3 transition-all group shadow-lg mt-2">
+                                        <div class="flex items-center gap-3">
+                                            <div class="bg-emerald-500 text-slate-950 p-2.5 rounded-xl text-2xl font-black group-hover:scale-105 transition-transform">
+                                                <i class="fa-brands fa-whatsapp"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-[10px] font-extrabold uppercase tracking-widest text-emerald-400 block">Instant WhatsApp Orders & Support</span>
+                                                <span class="text-sm sm:text-base font-black text-white tracking-wide">Direct Encrypted Chat</span>
+                                            </div>
+                                        </div>
+                                        <span class="bg-emerald-500 text-slate-950 text-xs font-black px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 shrink-0 group-hover:bg-emerald-400">
+                                            Chat Now <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                        </span>
+                                    </a>
+                                </div>
+
+                                <!-- Post-submit Confirmation Card -->
+                                <div id="orderSuccessBox" class="hidden bg-emerald-950/70 border border-emerald-500/60 p-5 rounded-xl space-y-3">
+                                    <div class="flex items-center gap-3 text-emerald-400">
+                                        <div class="bg-emerald-800 text-white p-2.5 rounded-xl text-lg font-black">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-extrabold text-white text-base">Request Submitted Successfully!</h4>
+                                            <p class="text-xs text-emerald-200">Payment details dispatched</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-slate-200 leading-relaxed">
+                                        We have received your request! We will email you the precise payment details and QR tag to <strong id="successEmailDisplay" class="text-emerald-300 font-mono-custom"></strong> shortly. Once your payment is confirmed on the blockchain, your e-book strategy blueprint will be sent directly to your inbox.
+                                    </p>
                                 </div>
 
                                 <!-- Actionable Steps -->
-                                <ol class="space-y-3 text-sm text-slate-200 font-normal list-none leading-relaxed pt-1">
+                                <ol class="space-y-3 text-sm text-slate-200 font-normal list-none leading-relaxed pt-2">
                                     <li class="flex items-start gap-3">
                                         <span class="h-6 w-6 rounded-full bg-emerald-800 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">1</span>
-                                        <span><strong class="text-white font-bold">Send Email Request:</strong> Email <span class="font-mono-custom text-emerald-400 font-bold">fmcotto10@gmail.com</span> with your payment currency preference.</span>
+                                        <span><strong class="text-white font-bold">Submit Request Form or WhatsApp:</strong> Fill out the request form above or send a message on WhatsApp with your preferred cryptocurrency.</span>
                                     </li>
                                     <li class="flex items-start gap-3">
                                         <span class="h-6 w-6 rounded-full bg-emerald-800 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">2</span>
-                                        <span><strong class="text-white font-bold">Receive Wallet Address:</strong> We will reply immediately with the precise deposit wallet address and QR tag.</span>
+                                        <span><strong class="text-white font-bold">Receive Payment Details:</strong> We will send you the exact wallet deposit address and QR tag for your selected cryptocurrency.</span>
                                     </li>
                                     <li class="flex items-start gap-3">
                                         <span class="h-6 w-6 rounded-full bg-blue-700 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">3</span>
-                                        <span><strong class="text-white font-bold">Instant PDF Dispatch:</strong> Upon 1-block ledger validation, the complete PDF blueprint is delivered straight to your inbox.</span>
+                                        <span><strong class="text-white font-bold">Instant PDF Dispatch:</strong> After payment confirmation on the network, the complete PDF strategy book is delivered straight to your inbox or WhatsApp.</span>
                                     </li>
                                 </ol>
                             </div>
@@ -664,26 +738,26 @@
                         <div class="space-y-6 mt-2 sm:mt-0">
                             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                                 <div class="text-blue-600 text-xs font-mono-custom font-bold uppercase tracking-wide flex items-center gap-2">
-                                    <i class="fa-solid fa-trophy"></i> Europe: Europa League Qualification
+                                    <i class="fa-solid fa-trophy"></i> Serbia: Mozzart Bet Super Liga
                                 </div>
                                 <div class="text-slate-700 text-xs font-bold font-mono-custom flex items-center gap-1.5 bg-slate-100 px-3 py-1 rounded-lg border border-slate-200">
-                                    <i class="fa-regular fa-calendar-days text-blue-600"></i> July 30, 2026
+                                    <i class="fa-regular fa-calendar-days text-blue-600"></i> August 02, 2026
                                 </div>
                             </div>
                             
                             <div>
                                 <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">Featured Fixture</span>
-                                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">Benfica (POR) v St. Gallen (SUI)</h2>
+                                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">Partizan vs IMT Novi Beograd</h2>
                             </div>
                             
                             <div class="grid sm:grid-cols-2 gap-4 bg-slate-50 rounded-2xl p-5 border border-slate-200">
                                 <div class="space-y-1">
                                     <span class="text-slate-500 text-xs font-bold uppercase tracking-wider block">PICK</span>
-                                    <span class="font-black text-blue-600 text-lg sm:text-xl block">Benfica (POR) AH-1</span>
+                                    <span class="font-black text-blue-600 text-lg sm:text-xl block">Partizan</span>
                                 </div>
                                 <div class="space-y-1 sm:border-l sm:border-slate-200 sm:pl-5">
                                     <span class="text-slate-500 text-xs font-bold uppercase tracking-wider block">ODDS</span>
-                                    <span class="font-mono-custom font-black text-blue-600 text-lg sm:text-xl block" id="oddsValue1">1.29</span>
+                                    <span class="font-mono-custom font-black text-blue-600 text-lg sm:text-xl block" id="oddsValue1">1.57</span>
                                 </div>
                                 <div class="sm:col-span-2 border-t border-slate-200 pt-3 flex flex-wrap justify-between items-center text-xs text-slate-600 gap-2">
                                     <span class="font-semibold"><i class="fa-solid fa-calculator text-blue-600 mr-1.5"></i> Model Method: Poisson Probability Distribution</span>
@@ -824,6 +898,7 @@
                     <ul class="space-y-2 text-xs text-slate-400 font-semibold">
                         <li><a href="#/free-tips" class="hover:text-blue-400 transition-colors"><i class="fa-solid fa-angles-right text-[9px] text-blue-400 mr-1.5"></i>Free Betting Tips</a></li>
                         <li><a href="#/privacy" class="hover:text-blue-400 transition-colors"><i class="fa-solid fa-angles-right text-[9px] text-blue-400 mr-1.5"></i>Privacy & Operations</a></li>
+                        <li><a href="https://wa.me/441892710291" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition-colors"><i class="fa-brands fa-whatsapp text-sm mr-1.5"></i>WhatsApp Support</a></li>
                     </ul>
                 </div>
 
@@ -1015,6 +1090,8 @@
 
         // Historical tips data array
         const tipsData = [
+            { date: "July 31, 2026", league: "Austria: Bundesliga", match: "Salzburg vs Hartberg", market: "Match Winner (1)", pick: "Salzburg", result: "1:0", odds: 1.30, status: "WON" },
+            { date: "July 30, 2026", league: "Europe: Europa League Qualification", match: "Benfica (POR) vs St. Gallen (SUI)", market: "Asian Handicap (-1)", pick: "Benfica (POR) AH-1", result: "5:0", odds: 1.29, status: "WON" },
             { date: "July 29, 2026", league: "Europe: Champions League Qualification", match: "Slovan Bratislava vs Ibera 1999", market: "Match Winner (1)", pick: "Slovan Bratislava", result: "1:1", odds: 1.33, status: "LOST" },
             { date: "July 27, 2026", league: "Bulgaria: efbet league", match: "Dunav Ruse vs Ludogorets", market: "Match Winner (2)", pick: "Ludogorets", result: "0:2", odds: 1.33, status: "WON" },
             { date: "July 26, 2026", league: "Czech Republic: Chance Liga", match: "Slavia Prague vs Slovacko", market: "Match Winner (1)", pick: "Slavia Prague", result: "5:1", odds: 1.20, status: "WON" },
@@ -1350,7 +1427,7 @@
 
         function renderOddsValues() {
             const oddsVal1 = document.getElementById('oddsValue1');
-            if (oddsVal1) oddsVal1.textContent = formatOdds(1.29);
+            if (oddsVal1) oddsVal1.textContent = formatOdds(1.57);
 
             const archiveBody = document.getElementById('tableArchiveBody');
             if (archiveBody) {
@@ -1439,6 +1516,68 @@
                     <p class="text-[10px] text-slate-400 leading-normal">Please transfer exactly the invoice amount and wait for 1-2 network confirmation rounds before scanned validation.</p>
                 `;
             }, 2500);
+        }
+
+        async function handleOrderSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('orderEmail').value.trim();
+            const confirmEmail = document.getElementById('orderConfirmEmail').value.trim();
+            const crypto = document.getElementById('orderCrypto').value;
+            const errorBox = document.getElementById('orderErrorMsg');
+            const errorText = document.getElementById('orderErrorText');
+            const submitBtn = document.getElementById('orderSubmitBtn');
+
+            if (email.toLowerCase() !== confirmEmail.toLowerCase()) {
+                errorText.textContent = "Email addresses do not match. Please double check both fields.";
+                errorBox.classList.remove('hidden');
+                return;
+            }
+
+            errorBox.classList.add('hidden');
+
+            // Disable submit button during request
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Submitting Request...`;
+            }
+
+            try {
+                const formData = new FormData();
+                formData.append("access_key", "beed5147-b201-4be9-b1f0-cf7b5791bb7c");
+                formData.append("email", email);
+                formData.append("crypto_preference", crypto);
+                formData.append("subject", "New €30k Strategy Book Order Request");
+                formData.append("from_name", "Fixed Matches Checker");
+
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    document.getElementById('blueprintOrderForm').classList.add('hidden');
+                    const successBox = document.getElementById('orderSuccessBox');
+                    document.getElementById('successEmailDisplay').textContent = email;
+                    successBox.classList.remove('hidden');
+                    alertToast(`Order request submitted for ${email}! Check your inbox for payment details.`);
+                } else {
+                    errorText.textContent = data.message || "Something went wrong while submitting. Please try again.";
+                    errorBox.classList.remove('hidden');
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Order Request`;
+                    }
+                }
+            } catch (err) {
+                errorText.textContent = "Network error. Please check your connection or contact us on WhatsApp.";
+                errorBox.classList.remove('hidden');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Order Request`;
+                }
+            }
         }
     </script>
 </body>
