@@ -3,7 +3,7 @@
 
     <!-- Home Dashboard -->
     <url>
-        <loc>https://example.com/</loc>
+        <loc>https://fixedmatches-checker.com/</loc>
         <lastmod>2026-08-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
     <!-- Scam Mechanics -->
     <url>
-        <loc>https://example.com/scams</loc>
+        <loc>https://fixedmatches-checker.com/scams</loc>
         <lastmod>2026-08-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -19,7 +19,7 @@
 
     <!-- €30k Strategy Book -->
     <url>
-        <loc>https://example.com/betting-strategy</loc>
+        <loc>https://fixedmatches-checker.com/betting-strategy</loc>
         <lastmod>2026-08-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
     <!-- Free Betting Tips -->
     <url>
-        <loc>https://example.com/free-tips</loc>
+        <loc>https://fixedmatches-checker.com/free-tips</loc>
         <lastmod>2026-08-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -35,7 +35,7 @@
 
     <!-- Privacy & Operations -->
     <url>
-        <loc>https://example.com/privacy</loc>
+        <loc>https://fixedmatches-checker.com/privacy</loc>
         <lastmod>2026-08-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
