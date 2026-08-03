@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Direct search bots to your XML Sitemap
-Sitemap: https://fixedmatcheschecker.com/sitemap.xml
+Sitemap: https://fixedmatches-checker.com/sitemap.xml
