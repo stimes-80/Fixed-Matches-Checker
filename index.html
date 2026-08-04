@@ -82,7 +82,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght=400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -218,13 +218,13 @@
                                         <div class="flex items-center justify-between border-b border-slate-100 pb-2">
                                             <div class="flex items-center gap-2">
                                                 <i class="fa-solid fa-trophy text-blue-600 text-xs"></i>
-                                                <p class="text-xs font-extrabold text-slate-800">Sweden: Allsvenskan</p>
+                                                <p class="text-xs font-extrabold text-slate-800">Europe: Champions League Qualification</p>
                                             </div>
-                                            <span class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Aug 03, 2026</span>
+                                            <span class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Aug 04, 2026</span>
                                         </div>
 
                                         <div>
-                                            <p class="text-sm font-black tracking-tight text-slate-900">Djurgarden vs Vasteras SK</p>
+                                            <p class="text-sm font-black tracking-tight text-slate-900">Din. Zagreb (CRO) vs Kauno Zalgiris (LTU)</p>
                                         </div>
                                     </div>
 
@@ -818,26 +818,26 @@
                         <div class="space-y-4">
                             <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                                 <div class="text-blue-600 text-xs font-mono-custom font-bold uppercase tracking-wide flex items-center gap-1.5">
-                                    <i class="fa-solid fa-trophy"></i> Sweden: Allsvenskan
+                                    <i class="fa-solid fa-trophy"></i> Europe: Champions League Qualification
                                 </div>
                                 <div class="text-slate-700 text-[10px] font-bold font-mono-custom bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
-                                    August 03, 2026
+                                    August 04, 2026
                                 </div>
                             </div>
                             
                             <div>
                                 <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">Featured Selection</span>
-                                <h2 class="text-xl font-black tracking-tight text-slate-900">Djurgarden vs Vasteras SK</h2>
+                                <h2 class="text-xl font-black tracking-tight text-slate-900">Din. Zagreb (CRO) vs Kauno Zalgiris (LTU)</h2>
                             </div>
                             
                             <div class="grid grid-cols-2 gap-3 bg-slate-50 rounded-2xl p-4 border border-slate-200">
                                 <div class="space-y-1">
                                     <span class="text-slate-500 text-[10px] font-bold uppercase tracking-wider block">PICK</span>
-                                    <span class="font-black text-blue-600 text-base block">Djurgarden</span>
+                                    <span class="font-black text-blue-600 text-base block">Over 2.5 goals</span>
                                 </div>
                                 <div class="space-y-1 border-l border-slate-200 pl-4">
                                     <span class="text-slate-500 text-[10px] font-bold uppercase tracking-wider block">ODDS</span>
-                                    <span class="font-mono-custom font-black text-blue-600 text-base block" id="oddsValue1">1.40</span>
+                                    <span class="font-mono-custom font-black text-blue-600 text-base block" id="oddsValue1">1.57</span>
                                 </div>
                             </div>
                         </div>
@@ -1652,6 +1652,7 @@
         ];
 
         const tipsData = [
+            { date: "August 03, 2026", league: "Sweden: Allsvenskan", match: "Djurgarden vs Vasteras SK", market: "Match Winner (1)", pick: "Djurgarden", result: "6:0", odds: 1.40, status: "WON" },
             { date: "August 02, 2026", league: "Serbia: Super Liga", match: "Partizan vs IMT Novi Beograd", market: "Over 1.5 Goals", pick: "Over 1.5", result: "1:2", odds: 1.25, status: "WON" },
             { date: "August 02, 2026", league: "Norway: OBOS-ligaen", match: "Kongsvinger vs Strommen", market: "Over 2.5 Goals", pick: "Over 2.5", result: "1:3", odds: 1.27, status: "WON" },
             { date: "July 31, 2026", league: "Austria: Bundesliga", match: "Salzburg vs Hartberg", market: "Match Winner (1)", pick: "Salzburg", result: "1:0", odds: 1.30, status: "WON" },
@@ -1664,7 +1665,7 @@
             { date: "July 23, 2026", league: "Europe: Conference League – Qual.", match: "Partizan (SRB) vs UNA Strassen (LUX)", market: "Over 2.5 Goals", pick: "Partizan (SRB)", result: "4:0", odds: 1.50, status: "WON" },
             { date: "July 22, 2026", league: "Europe: Conference League – Qual.", match: "Basaksehir (TUR) vs Inter Turku (FIN)", market: "Match Winner (1)", pick: "Basaksehir (TUR)", result: "1:1", odds: 1.25, status: "LOST" },
             { date: "July 21, 2026", league: "Europe: Champions League – Qual.", match: "Fenerbahce (TUR) vs Gornik Zabrze (POL)", market: "Match Winner (1)", pick: "Fenerbahce (TUR)", result: "1:0", odds: 1.20, status: "WON" },
-            { date: "July 20, 2026", league: "Finland: Ykkonen", match: "KPV Kokkola vs Rovaniemi", market: "Away Win (2)", pick: "Rovaniemi", result: "1:1", odds: 1.30, status: "LOST" },
+            { date: "July 20, 2026", league: "Finland: Ykkonen", match: "KPV Kokkola vs Rovaniemi", match: "Away Win (2)", pick: "Rovaniemi", result: "1:1", odds: 1.30, status: "LOST" },
             { date: "July 19, 2026", league: "World Cup", match: "Spain vs Argentina", market: "Double Chance (1X)", pick: "Spain or Draw", result: "0:0 (1:0ET)", odds: 1.30, status: "WON" },
             { date: "July 18, 2026", league: "World Cup", match: "France vs England", market: "Both Teams To Score", pick: "BTTS - Yes", result: "4:6", odds: 1.50, status: "WON" },
             { date: "July 17, 2026", league: "Serbia: Super Liga", match: "Crvena Zvezda vs Macva", market: "Asian Handicap (-2)", pick: "Crvena Zvezda (AH-2)", result: "5:0", odds: 1.28, status: "WON" }
