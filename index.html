@@ -218,13 +218,13 @@
                                         <div class="flex items-center justify-between border-b border-slate-100 pb-2">
                                             <div class="flex items-center gap-2">
                                                 <i class="fa-solid fa-trophy text-blue-600 text-xs"></i>
-                                                <p class="text-xs font-extrabold text-slate-800">Europe: Champions League Qualification</p>
+                                                <p class="text-xs font-extrabold text-slate-800">England: EFL Cup</p>
                                             </div>
-                                            <span class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Aug 05, 2026</span>
+                                            <span class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Aug 08, 2026</span>
                                         </div>
 
                                         <div>
-                                            <p class="text-sm font-black tracking-tight text-slate-900">Fenerbahce (TUR) vs Sturm Graz (AUT)</p>
+                                            <p class="text-sm font-black tracking-tight text-slate-900">Leicester vs Northampton</p>
                                         </div>
                                     </div>
 
@@ -241,7 +241,6 @@
                 </div>
             </section>
 
-            <!-- VIP Subscription Excerpt Section on Home Page -->
             <section id="vip-excerpt" class="py-16 bg-slate-900 text-white border-b border-slate-800 relative overflow-hidden">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(30,136,229,0.12),transparent_60%)]"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -802,7 +801,7 @@
 
                 <!-- Featured Free Tips Cards -->
                 <div class="max-w-xl mx-auto w-full">
-                    <!-- Card 1: Djurgarden vs Vasteras SK -->
+                    <!-- Card 1: Leicester vs Northampton -->
                     <div class="bg-gradient-to-br from-white to-slate-50 text-slate-800 rounded-3xl p-6 border border-slate-200 shadow-xl relative overflow-hidden flex flex-col justify-between">
                         <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-xl"></div>
 
@@ -818,26 +817,26 @@
                         <div class="space-y-4">
                             <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                                 <div class="text-blue-600 text-xs font-mono-custom font-bold uppercase tracking-wide flex items-center gap-1.5">
-                                    <i class="fa-solid fa-trophy"></i> Europe: Champions League Qualification
+                                    <i class="fa-solid fa-trophy"></i> England: EFL Cup
                                 </div>
                                 <div class="text-slate-700 text-[10px] font-bold font-mono-custom bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
-                                    August 05, 2026
+                                    August 08, 2026
                                 </div>
                             </div>
                             
                             <div>
                                 <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">Featured Selection</span>
-                                <h2 class="text-xl font-black tracking-tight text-slate-900">Fenerbahce (TUR) vs Sturm Graz (AUT)</h2>
+                                <h2 class="text-xl font-black tracking-tight text-slate-900">Leicester vs Northampton</h2>
                             </div>
                             
                             <div class="grid grid-cols-2 gap-3 bg-slate-50 rounded-2xl p-4 border border-slate-200">
                                 <div class="space-y-1">
                                     <span class="text-slate-500 text-[10px] font-bold uppercase tracking-wider block">PICK</span>
-                                    <span class="font-black text-blue-600 text-base block">Fenerbahce (TUR)</span>
+                                    <span class="font-black text-blue-600 text-base block">Leicester</span>
                                 </div>
                                 <div class="space-y-1 border-l border-slate-200 pl-4">
                                     <span class="text-slate-500 text-[10px] font-bold uppercase tracking-wider block">ODDS</span>
-                                    <span class="font-mono-custom font-black text-blue-600 text-base block" id="oddsValue1">1.36</span>
+                                    <span class="font-mono-custom font-black text-blue-600 text-base block" id="oddsValue1">1.22</span>
                                 </div>
                             </div>
                         </div>
@@ -1001,7 +1000,7 @@
                                     <i class="fa-solid fa-bolt text-xs"></i> SEASON LAUNCH
                                 </span>
                                 
-                                <span class="text-xs text-slate-400 font-extrabold tracking-widest uppercase block">STARTS SATURDAY</span>
+                                <span class="text-xs text-slate-400 font-extrabold tracking-widest uppercase block">STARTS TODAY</span>
                                 <h3 class="text-2xl sm:text-3xl font-black text-white font-mono-custom tracking-tight my-1 text-emerald-400">
                                     AUG 08, 2026
                                 </h3>
@@ -1652,6 +1651,7 @@
         ];
 
         const tipsData = [
+            { date: "August 05, 2026", league: "Europe: Champions League Qualification", match: "Fenerbahce (TUR) vs Sturm Graz (AUT)", market: "Match Winner (1)", pick: "Fenerbahce (TUR)", result: "2:0", odds: 1.36, status: "WON" },
             { date: "August 04, 2026", league: "Europe: Champions League Qualification", match: "Din. Zagreb (CRO) vs Kauno Zalgiris (LTU)", market: "Over 2.5 Goals", pick: "Over 2.5", result: "5:0", odds: 1.57, status: "WON" },
             { date: "August 03, 2026", league: "Sweden: Allsvenskan", match: "Djurgarden vs Vasteras SK", market: "Match Winner (1)", pick: "Djurgarden", result: "6:0", odds: 1.40, status: "WON" },
             { date: "August 02, 2026", league: "Serbia: Super Liga", match: "Partizan vs IMT Novi Beograd", market: "Over 1.5 Goals", pick: "Over 1.5", result: "1:2", odds: 1.25, status: "WON" },
@@ -2080,7 +2080,7 @@
 
         function renderOddsValues() {
             const oddsVal1 = document.getElementById('oddsValue1');
-            if (oddsVal1) oddsVal1.textContent = formatOdds(1.40);
+            if (oddsVal1) oddsVal1.textContent = formatOdds(1.22);
 
             const oddsVal2 = document.getElementById('oddsValue2');
             if (oddsVal2) oddsVal2.textContent = formatOdds(1.65);
