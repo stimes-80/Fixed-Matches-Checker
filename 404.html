@@ -572,24 +572,24 @@
                                 <span class="text-[11px] font-black text-slate-700 tracking-wider uppercase">FREE FOOTBALL BETTING TIP TODAY</span>
                             </div>
                             <div class="text-slate-500 text-[11px] font-bold font-mono-custom bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200 flex items-center gap-1">
-                                <i class="fa-solid fa-calendar-day text-blue-600 text-[10px]"></i> <span id="featuredDate">August 23, 2026</span>
+                                <i class="fa-solid fa-calendar-day text-blue-600 text-[10px]"></i> <span id="featuredDate">August 24, 2026</span>
                             </div>
                         </div>
 
                         <div class="space-y-2.5">
                             <div id="featuredLeague" class="text-blue-600 text-xs font-mono-custom font-extrabold uppercase tracking-wide flex items-center gap-1.5">
-                                <i class="fa-solid fa-trophy text-amber-500"></i> England: Premier League
+                                <i class="fa-solid fa-trophy text-amber-500"></i> Serbia: Prva Liga
                             </div>
                             
                             <div class="bg-slate-50 rounded-xl p-3 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                                 <div class="flex-1 min-w-0">
                                     <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">FIXTURE</span>
-                                    <h3 id="featuredMatch" class="text-base font-black tracking-tight text-slate-900 truncate">Manchester City vs Bournemouth</h3>
+                                    <h3 id="featuredMatch" class="text-base font-black tracking-tight text-slate-900 truncate">Smederevo vs Teleoptik</h3>
                                 </div>
                                 <div class="flex items-center gap-4 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 sm:border-l border-slate-200 sm:pl-4">
                                     <div>
                                         <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">PICK</span>
-                                        <span id="featuredPick" class="font-black text-blue-600 text-sm block">Manchester City</span>
+                                        <span id="featuredPick" class="font-black text-blue-600 text-sm block">Smederevo</span>
                                     </div>
                                     <div class="border-l border-slate-200 pl-4">
                                         <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">ODDS</span>
@@ -732,6 +732,7 @@
         let currentOddsFormat = 'decimal';
 
         const vipTipsData = [
+            { date: "23 August, 2026", league: "Israel: Ligat ha'Al", match: "Hapoel Jerusalem vs Maccabi Tel Aviv", market: "Over 5.5 Goals", pick: "Over 5.5", result: "2:5", odds: 11.00, status: "WON" },
             { date: "22 August, 2026", league: "Slovenia: 2. SNL", match: "Ilirija vs Rudar", market: "Match Winner (1)", pick: "Ilirija", result: "2:0", odds: 2.57, status: "WON" },
             { date: "21 August, 2026", league: "Portugal: Liga Portugal 2", match: "Tondela vs Academica", market: "Match Winner (2)", pick: "Academica", result: "0:2", odds: 3.50, status: "WON" },
             { date: "20 August, 2026", league: "France: Coupe de France", match: "Le Puy-en-Velay vs Amiens", market: "Match Winner (1)", pick: "Le Puy-en-Velay", result: "1:0", odds: 2.26, status: "WON" },
@@ -749,7 +750,8 @@
         ];
 
         const tipsData = [
-            { date: "August 23, 2026", league: "England: Premier League", match: "Manchester City vs Bournemouth", market: "Match Winner (1)", pick: "Manchester City", result: "-:-", odds: 1.45, status: "PENDING" },
+            { date: "August 24, 2026", league: "Serbia: Prva Liga", match: "Smederevo vs Teleoptik", market: "Match Winner (1)", pick: "Smederevo", result: "-:-", odds: 1.45, status: "PENDING" },
+            { date: "August 23, 2026", league: "England: Premier League", match: "Manchester City vs Bournemouth", market: "Match Winner (1)", pick: "Manchester City", result: "2:1", odds: 1.45, status: "WON" },
             { date: "August 22, 2026", league: "Germany: Supercup", match: "Dortmund vs Bayern Munich", market: "Over 2.5 Goals", pick: "Over 2.5", result: "1:2", odds: 1.25, status: "WON" },
             { date: "August 21, 2026", league: "Spain: La Liga", match: "Betis vs Real Sociedad", market: "Over 1.5 Goals", pick: "Over 1.5", result: "1:0", odds: 1.25, status: "LOST" },
             { date: "August 20, 2026", league: "Europe: Champions League Qualification", match: "Getafe (ESP) vs Partizan (SRB)", market: "Match Winner (1)", pick: "Getafe (ESP)", result: "3:1", odds: 1.33, status: "WON" },
