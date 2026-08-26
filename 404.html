@@ -509,15 +509,13 @@
                     <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
                         Free Football Betting Tips & Value Selections
                     </h2>
+                    <p class="text-slate-600 font-light text-sm sm:text-base leading-relaxed">
+                        Access expert <strong>football betting tips</strong> and statistical soccer predictions daily.
+                    </p>
                 </div>
 
-                <div class="max-w-5xl mx-auto w-full space-y-2 sm:space-y-3">
-                    <div class="text-center">
-                        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Paid Advertisement</span>
-                    </div>
-
-                    <!-- Row 1 Banners (Above Free Tip) -->
-                    <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
+                 <!-- Ad Banners Section -->
+                <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
                         <a href="https://chelsea-bet.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://chelsea-bet.com/wp-content/uploads/2021/09/fixed-matches-chelsea-bet.gif" alt="bettingnator" class="w-full h-full object-contain">
@@ -534,9 +532,10 @@
                          <a href="https://statarea-predictions.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://statarea-predictions.com/wp-content/uploads/statarea-fixed-matches-predictions.gif" alt="Best odd 1x2" class="w-full h-full object-contain">
                         </a>
-                
                     </div>
                 </div>
+
+                <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
                         <a href="https://fixedmatch.fun/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/xuahg9Y.gif" alt="Fixed Match Fun" class="w-full h-full object-contain">
@@ -555,7 +554,6 @@
                         </a>
                     </div>
 
-                    <!-- Row 2 Banners (Above Free Tip) -->
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
                         <a href="https://www.fixed-bet1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/3VgdRXm.gif" alt="Fixed Bet 1x2" class="w-full h-full object-contain">
@@ -575,6 +573,8 @@
                     </div>
                 </div>
 
+
+                <!-- Odds Format Switcher Controls -->
                 <div class="flex justify-center pt-1">
                     <div class="inline-flex bg-slate-200 p-1 rounded-xl border border-slate-300 shadow-sm">
                         <button onclick="setOddsFormat('decimal')" id="btnOddsDec" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-white text-slate-900 shadow-sm">Decimal</button>
@@ -583,48 +583,12 @@
                     </div>
                 </div>
 
-                <!-- Featured Free Tip Card -->
-                <div class="max-w-2xl mx-auto w-full">
-                    <div class="bg-gradient-to-br from-white to-slate-50 text-slate-800 rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-lg relative overflow-hidden">
-                        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 mb-3">
-                            <div class="flex items-center gap-2">
-                                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                <span class="text-[11px] font-black text-slate-700 tracking-wider uppercase">FREE FOOTBALL BETTING TIP TODAY</span>
-                            </div>
-                            <div class="text-slate-500 text-[11px] font-bold font-mono-custom bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200 flex items-center gap-1">
-                                <i class="fa-solid fa-calendar-day text-blue-600 text-[10px]"></i> <span id="featuredDate">August 25, 2026</span>
-                            </div>
-                        </div>
-
-                        <div class="space-y-2.5">
-                            <div id="featuredLeague" class="text-blue-600 text-xs font-mono-custom font-extrabold uppercase tracking-wide flex items-center gap-1.5">
-                                <i class="fa-solid fa-trophy text-amber-500"></i> Europe: Champions League Qualification
-                            </div>
-                            
-                            <div class="bg-slate-50 rounded-xl p-3 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                                <div class="flex-1 min-w-0">
-                                    <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">FIXTURE</span>
-                                    <h3 id="featuredMatch" class="text-base font-black tracking-tight text-slate-900 truncate">Bodo/Glimt (NOR) vs Nijmegen (NED)</h3>
-                                </div>
-                                <div class="flex items-center gap-4 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 sm:border-l border-slate-200 sm:pl-4">
-                                    <div>
-                                        <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">PICK</span>
-                                        <span id="featuredPick" class="font-black text-blue-600 text-sm block">Bodo/Glimt (NOR)</span>
-                                    </div>
-                                    <div class="border-l border-slate-200 pl-4">
-                                        <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">ODDS</span>
-                                        <span class="font-mono-custom font-black text-blue-600 text-sm block" id="oddsValue1">1.48</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="border-t border-slate-100 pt-2 mt-3 flex items-center justify-between text-[10px] text-slate-500 font-semibold">
-                            <span><i class="fa-solid fa-calculator text-blue-600 mr-1"></i> Poisson Distribution Model</span>
-                            <span class="text-blue-600 font-bold uppercase tracking-wide text-[10px]"><i class="fa-solid fa-bolt mr-1"></i> Verified</span>
-                        </div>
-                    </div>
+                <!-- Featured Free Tip Cards Container (Unified August 26, 2026 Card) -->
+                <div id="featuredTipsContainer" class="max-w-2xl mx-auto w-full space-y-4">
+                    <!-- Dynamic Featured Cards rendered via JS -->
                 </div>
+
+                <!-- Ad Banners Section -->
 
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
@@ -643,9 +607,9 @@
                          <a href="https://www.soccerfixed.io/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/HPsKjLb.gif" alt="Best odd 1x2" class="w-full h-full object-contain">
                         </a>
-                
                     </div>
                 </div>
+
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
                          <a href="https://surefixedmatch.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
@@ -659,6 +623,7 @@
                         </a>
                     </div>
                 </div>
+
                  <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
                         <a href="https://mega-match1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
@@ -785,6 +750,7 @@
         let currentOddsFormat = 'decimal';
 
         const vipTipsData = [
+            { date: "25 August, 2026", league: "Latvia: Virsliga", match: "Auda vs FK Liepaja", market: "Match Winner (1)", pick: "Auda", result: "1:0", odds: 1.96, status: "WON" },
             { date: "23 August, 2026", league: "Israel: Ligat ha'Al", match: "Hapoel Jerusalem vs Maccabi Tel Aviv", market: "Over 5.5 Goals", pick: "Over 5.5", result: "2:5", odds: 11.00, status: "WON" },
             { date: "22 August, 2026", league: "Slovenia: 2. SNL", match: "Ilirija vs Rudar", market: "Match Winner (1)", pick: "Ilirija", result: "2:0", odds: 2.57, status: "WON" },
             { date: "21 August, 2026", league: "Portugal: Liga Portugal 2", match: "Tondela vs Academica", market: "Match Winner (2)", pick: "Academica", result: "0:2", odds: 3.50, status: "WON" },
@@ -803,7 +769,9 @@
         ];
 
         const tipsData = [
-            { date: "August 25, 2026", league: "Europe: Champions League Qualification", match: "Bodo/Glimt (NOR) vs Nijmegen (NED)", market: "Match Winner (1)", pick: "Bodo/Glimt (NOR)", result: "-:-", odds: 1.48, status: "PENDING" },
+            { date: "August 26, 2026", league: "Europe: Champions League Qualification", match: "Lyon (FRA) vs Fenerbahce (TUR)", market: "Double Chance (1X)", pick: "Lyon (FRA) or Draw", result: "-:-", odds: 1.22, status: "PENDING" },
+            { date: "August 26, 2026", league: "Spain: La Liga", match: "Real Madrid vs Real Sociedad", market: "Match Winner (1)", pick: "Real Madrid", result: "-:-", odds: 1.25, status: "PENDING" },
+            { date: "August 25, 2026", league: "Europe: Champions League Qualification", match: "Bodo/Glimt (NOR) vs Nijmegen (NED)", market: "Match Winner (1)", pick: "Bodo/Glimt (NOR)", result: "3:0", odds: 1.48, status: "WON" },
             { date: "August 24, 2026", league: "Serbia: Prva Liga", match: "Smederevo vs Teleoptik", market: "Match Winner (1)", pick: "Smederevo", result: "1:1", odds: 1.45, status: "LOST" },
             { date: "August 23, 2026", league: "England: Premier League", match: "Manchester City vs Bournemouth", market: "Match Winner (1)", pick: "Manchester City", result: "2:1", odds: 1.45, status: "WON" },
             { date: "August 22, 2026", league: "Germany: Supercup", match: "Dortmund vs Bayern Munich", market: "Over 2.5 Goals", pick: "Over 2.5", result: "1:2", odds: 1.25, status: "WON" },
@@ -943,19 +911,60 @@
         }
 
         function renderOddsValues() {
-            if (tipsData.length > 0) {
-                const topTip = tipsData[0];
-                const oddsVal1 = document.getElementById('oddsValue1');
-                const featDate = document.getElementById('featuredDate');
-                const featLeague = document.getElementById('featuredLeague');
-                const featMatch = document.getElementById('featuredMatch');
-                const featPick = document.getElementById('featuredPick');
+            const featuredContainer = document.getElementById('featuredTipsContainer');
+            if (featuredContainer && tipsData.length > 0) {
+                const todayDate = tipsData[0].date;
+                const todayTips = tipsData.filter(t => t.date === todayDate);
+                
+                let matchesHtml = '';
+                todayTips.forEach((tip, idx) => {
+                    const borderTop = idx > 0 ? 'border-t border-slate-200 pt-3 mt-3' : '';
+                    matchesHtml += `
+                        <div class="space-y-2.5 ${borderTop}">
+                            <div class="text-blue-600 text-xs font-mono-custom font-extrabold uppercase tracking-wide flex items-center gap-1.5">
+                                <i class="fa-solid fa-trophy text-amber-500"></i> ${tip.league}
+                            </div>
+                            
+                            <div class="bg-slate-50 rounded-xl p-3 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">FIXTURE</span>
+                                    <h3 class="text-base font-black tracking-tight text-slate-900 truncate">${tip.match}</h3>
+                                </div>
+                                <div class="flex items-center gap-4 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 sm:border-l border-slate-200 sm:pl-4">
+                                    <div>
+                                        <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">PICK</span>
+                                        <span class="font-black text-blue-600 text-sm block">${tip.pick}</span>
+                                    </div>
+                                    <div class="border-l border-slate-200 pl-4">
+                                        <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block">ODDS</span>
+                                        <span class="font-mono-custom font-black text-blue-600 text-sm block">${formatOdds(tip.odds)}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
 
-                if (oddsVal1) oddsVal1.textContent = formatOdds(topTip.odds);
-                if (featDate) featDate.textContent = topTip.date;
-                if (featLeague) featLeague.innerHTML = `<i class="fa-solid fa-trophy text-amber-500"></i> ${topTip.league}`;
-                if (featMatch) featMatch.textContent = topTip.match;
-                if (featPick) featPick.textContent = topTip.pick;
+                featuredContainer.innerHTML = `
+                    <div class="bg-gradient-to-br from-white to-slate-50 text-slate-800 rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-lg relative overflow-hidden">
+                        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 mb-3">
+                            <div class="flex items-center gap-2">
+                                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span class="text-[11px] font-black text-slate-700 tracking-wider uppercase">FREE FOOTBALL BETTING TIPS TODAY</span>
+                            </div>
+                            <div class="text-slate-500 text-[11px] font-bold font-mono-custom bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200 flex items-center gap-1">
+                                <i class="fa-solid fa-calendar-day text-blue-600 text-[10px]"></i> ${todayDate}
+                            </div>
+                        </div>
+
+                        ${matchesHtml}
+
+                        <div class="border-t border-slate-100 pt-2 mt-3 flex items-center justify-between text-[10px] text-slate-500 font-semibold">
+                            <span><i class="fa-solid fa-calculator text-blue-600 mr-1"></i> Poisson Distribution Model</span>
+                            <span class="text-blue-600 font-bold uppercase tracking-wide text-[10px]"><i class="fa-solid fa-bolt mr-1"></i> Verified</span>
+                        </div>
+                    </div>
+                `;
             }
 
             const vipArchiveBody = document.getElementById('vipArchiveTableBody');
