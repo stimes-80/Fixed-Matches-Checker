@@ -925,7 +925,9 @@
         ];
 
         const tipsData = [
-            { date: "September 3, 2026", league: "Spain: La Liga", match: "Real Sociedad vs Celta Vigo", market: "Double Chance (1X)", pick: "Real Sociedad or Draw", result: "-:-", odds: 1.22, status: "PENDING" },
+            { date: "September 4, 2026", league: "Spain: La Liga", match: "Betis vs Real Madrid", market: "Match Winner (2)", pick: "Real Madrid", result: "-:-", odds: 1.50, status: "PENDING" },
+            { date: "September 4, 2026", league: "France: Ligue 1", match: "PSG vs Monaco", market: "Both Teams To Score", pick: "Yes (BTTS)", result: "-:-", odds: 1.57, status: "PENDING" },
+            { date: "September 3, 2026", league: "Spain: La Liga", match: "Real Sociedad vs Celta Vigo", market: "Double Chance (1X)", pick: "Real Sociedad or Draw", result: "0:0", odds: 1.22, status: "WON" },
             { date: "September 2, 2026", league: "Bosnia & Herzegovina: WWIN Liga BiH", match: "Borac Banja Luka vs Zeljeznicar", market: "Match Winner (1)", pick: "Borac Banja Luka", result: "2:0", odds: 1.30, status: "WON" },
             { date: "September 1, 2026", league: "Bosnia & Herzegovina: WWIN Liga BiH", match: "Zrinjski vs BSK Banja Luka", market: "Match Winner (1)", pick: "Zrinjski", result: "3:1", odds: 1.20, status: "WON" },
             { date: "August 31, 2026", league: "England: Premier League", match: "Aston Villa vs Arsenal", market: "Match Winner (2)", pick: "Arsenal", result: "0:1", odds: 1.50, status: "WON" },
@@ -1010,32 +1012,41 @@
             const container = document.getElementById('featuredTipsContainer');
             if (!container) return;
 
-            const latestTip = tipsData[0];
-            if (!latestTip) return;
+            if (!tipsData || tipsData.length === 0) return;
+
+            const latestDate = tipsData[0].date;
+            const todayTips = tipsData.filter(item => item.date === latestDate);
+
+            const tipsHtml = todayTips.map(tip => `
+                <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-150 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">${tip.league}</span>
+                        <h4 class="font-extrabold text-slate-900 text-base">${tip.match}</h4>
+                        <p class="text-xs text-blue-600 font-bold mt-0.5"><i class="fa-solid fa-bullseye mr-1"></i>Pick: ${tip.pick}</p>
+                    </div>
+                    <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-slate-200 pt-2 sm:pt-0 shrink-0">
+                        <span class="text-[10px] text-slate-400 uppercase font-bold">Odds</span>
+                        <span class="text-xl font-black text-slate-900 font-mono-custom">${formatOdds(tip.odds)}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            const isPending = todayTips.some(t => t.status === 'PENDING');
+            const statusBadge = isPending 
+                ? `<span class="bg-amber-100 text-amber-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-clock text-amber-600"></i> PENDING</span>`
+                : `<span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-circle-check text-emerald-600"></i> WON</span>`;
 
             container.innerHTML = `
                 <div class="bg-white rounded-3xl p-6 border-2 border-blue-500/80 shadow-xl space-y-4">
                     <div class="flex items-center justify-between border-b border-slate-100 pb-3 flex-wrap gap-2">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-blue-50 text-blue-700 border border-blue-200">
-                            <i class="fa-solid fa-star text-amber-500"></i> ${latestTip.date} Selections
+                            <i class="fa-solid fa-star text-amber-500"></i> ${latestDate} Selections
                         </span>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check text-emerald-600"></i> ${latestTip.status}
-                        </span>
+                        ${statusBadge}
                     </div>
 
                     <div class="space-y-3">
-                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-150 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                            <div>
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">${latestTip.league}</span>
-                                <h4 class="font-extrabold text-slate-900 text-base">${latestTip.match}</h4>
-                                <p class="text-xs text-blue-600 font-bold mt-0.5"><i class="fa-solid fa-bullseye mr-1"></i>Pick: ${latestTip.pick}</p>
-                            </div>
-                            <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-slate-200 pt-2 sm:pt-0 shrink-0">
-                                <span class="text-[10px] text-slate-400 uppercase font-bold">Odds</span>
-                                <span class="text-xl font-black text-slate-900 font-mono-custom">${formatOdds(latestTip.odds)}</span>
-                            </div>
-                        </div>
+                        ${tipsHtml}
                     </div>
                 </div>
             `;
