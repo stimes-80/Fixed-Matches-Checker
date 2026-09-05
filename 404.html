@@ -925,8 +925,10 @@
         ];
 
         const tipsData = [
-            { date: "September 4, 2026", league: "Spain: La Liga", match: "Betis vs Real Madrid", market: "Match Winner (2)", pick: "Real Madrid", result: "-:-", odds: 1.50, status: "PENDING" },
-            { date: "September 4, 2026", league: "France: Ligue 1", match: "PSG vs Monaco", market: "Both Teams To Score", pick: "Yes (BTTS)", result: "-:-", odds: 1.57, status: "PENDING" },
+            { date: "September 5, 2026", league: "England: Premier League", match: "Manchester City vs Coventry", market: "Match Winner (1)", pick: "Manchester City", result: "-:-", odds: 1.20, status: "PENDING" },
+            { date: "September 5, 2026", league: "Italy: Serie A", match: "Inter vs Napoli", market: "Match Winner (1)", pick: "Inter", result: "-:-", odds: 1.65, status: "PENDING" },
+            { date: "September 4, 2026", league: "England: Premier League", match: "Manchester City vs Coventry", market: "Match Winner (1)", pick: "Manchester City", result: "2:0", odds: 1.20, status: "WON" },
+            { date: "September 4, 2026", league: "France: Ligue 1", match: "PSG vs Monaco", market: "Both Teams To Score", pick: "Yes (BTTS)", result: "1:2", odds: 1.57, status: "WON" },
             { date: "September 3, 2026", league: "Spain: La Liga", match: "Real Sociedad vs Celta Vigo", market: "Double Chance (1X)", pick: "Real Sociedad or Draw", result: "0:0", odds: 1.22, status: "WON" },
             { date: "September 2, 2026", league: "Bosnia & Herzegovina: WWIN Liga BiH", match: "Borac Banja Luka vs Zeljeznicar", market: "Match Winner (1)", pick: "Borac Banja Luka", result: "2:0", odds: 1.30, status: "WON" },
             { date: "September 1, 2026", league: "Bosnia & Herzegovina: WWIN Liga BiH", match: "Zrinjski vs BSK Banja Luka", market: "Match Winner (1)", pick: "Zrinjski", result: "3:1", odds: 1.20, status: "WON" },
@@ -1024,17 +1026,24 @@
                         <h4 class="font-extrabold text-slate-900 text-base">${tip.match}</h4>
                         <p class="text-xs text-blue-600 font-bold mt-0.5"><i class="fa-solid fa-bullseye mr-1"></i>Pick: ${tip.pick}</p>
                     </div>
-                    <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-slate-200 pt-2 sm:pt-0 shrink-0">
-                        <span class="text-[10px] text-slate-400 uppercase font-bold">Odds</span>
-                        <span class="text-xl font-black text-slate-900 font-mono-custom">${formatOdds(tip.odds)}</span>
+                    <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-slate-200 pt-2 sm:pt-0 shrink-0 gap-1">
+                        ${tip.result !== '-:-' ? `<span class="text-xs font-mono-custom font-bold text-slate-700">FT: ${tip.result}</span>` : ''}
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] text-slate-400 uppercase font-bold">Odds</span>
+                            <span class="text-xl font-black text-slate-900 font-mono-custom">${formatOdds(tip.odds)}</span>
+                        </div>
+                        ${tip.status !== 'PENDING' ? `<span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-black ${tip.status === 'WON' ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'}">${tip.status}</span>` : ''}
                     </div>
                 </div>
             `).join('');
 
             const isPending = todayTips.some(t => t.status === 'PENDING');
+            const allWon = todayTips.every(t => t.status === 'WON');
             const statusBadge = isPending 
                 ? `<span class="bg-amber-100 text-amber-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-clock text-amber-600"></i> PENDING</span>`
-                : `<span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-circle-check text-emerald-600"></i> WON</span>`;
+                : (allWon 
+                    ? `<span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-circle-check text-emerald-600"></i> ALL WON</span>`
+                    : `<span class="bg-slate-200 text-slate-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-flag-checkered text-slate-600"></i> COMPLETED</span>`);
 
             container.innerHTML = `
                 <div class="bg-white rounded-3xl p-6 border-2 border-blue-500/80 shadow-xl space-y-4">
