@@ -109,7 +109,7 @@
     }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%230a0f1d'/%3E%3Cpath fill='none' stroke='%230866FF' stroke-width='42' d='M330 330l95 95' stroke-linecap='round'/%3E%3Ccircle cx='225' cy='225' r='135' fill='none' stroke='%230866FF' stroke-width='38'/%3E%3Cpath fill='none' stroke='%2300FF87' stroke-width='38' stroke-linecap='round' stroke-linejoin='round' d='M160 225l45 45 85-85'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%23080e1a'/%3E%3Cpath fill='none' stroke='%233b82f6' stroke-width='42' d='M330 330l95 95' stroke-linecap='round'/%3E%3Ccircle cx='225' cy='225' r='135' fill='none' stroke='%233b82f6' stroke-width='38'/%3E%3Cpath fill='none' stroke='%2310b981' stroke-width='38' stroke-linecap='round' stroke-linejoin='round' d='M160 225l45 45 85-85'/%3E%3C/svg%3E">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -117,30 +117,20 @@
             theme: {
                 extend: {
                     colors: {
-                        blue: {
-                            50: '#f0f6ff',
-                            100: '#e1edff',
-                            200: '#bcd7ff',
-                            300: '#64b5f6',
-                            400: '#1E88E5', 
-                            500: '#1E88E5',
-                            600: '#1E88E5', 
-                            700: '#1565c0', 
-                            800: '#1E88E5', 
-                            850: '#1565c0',
-                            900: '#0d47a1',
-                        },
-                        trust: {
-                            dark: '#0a0f1d',
-                            lightnavy: '#151e36',
-                            accent: '#1E88E5', 
-                            action: '#1E88E5', 
-                            coral: '#f43f5e',
+                        brand: {
+                            bg: '#080d19',
+                            surface: '#0f172a',
+                            card: '#131e32',
+                            border: '#1e293b',
+                            accent: '#3b82f6',
+                            accentHover: '#2563eb',
+                            gold: '#f59e0b',
                             emerald: '#10b981'
                         }
                     },
                     fontFamily: {
-                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
                     }
                 }
             }
@@ -150,62 +140,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: #0b1120;
         }
         .font-mono-custom {
             font-family: 'JetBrains Mono', monospace;
         }
+        .bg-mesh-trust {
+            background-color: #0b1120;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.18) 0px, transparent 55%),
+                radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.12) 0px, transparent 55%),
+                radial-gradient(at 50% 50%, rgba(16, 185, 129, 0.08) 0px, transparent 55%);
+        }
+        .glass-card {
+            background: #131d31;
+            backdrop-filter: blur(16px);
+            border: 1px solid #2a3854;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+        }
+        .glass-card-amber {
+            background: linear-gradient(180deg, #2a1a08 0%, #131d31 100%);
+            backdrop-filter: blur(16px);
+            border: 1.5px solid #f59e0b;
+            box-shadow: 0 12px 35px -5px rgba(245, 158, 11, 0.2);
+        }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 flex flex-col min-h-screen">
+<body class="bg-mesh-trust text-slate-100 flex flex-col min-h-screen selection:bg-blue-600 selection:text-white">
 
-    <header class="sticky top-0 z-40 bg-trust-dark/95 backdrop-blur-md border-b border-trust-lightnavy text-white shadow-xl">
+    <header class="sticky top-0 z-40 bg-[#0b1120]/95 backdrop-blur-xl border-b border-slate-700 text-white shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#hero" class="flex items-center gap-3 group" title="Fixed Matches Checker - Home">
-                <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform duration-200">
+            <a href="#hero" class="flex items-center gap-3.5 group" title="Fixed Matches Checker - Home">
+                <div class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-2.5 rounded-2xl shadow-lg shadow-blue-600/30 group-hover:scale-105 transition-all duration-300 border border-blue-400/40">
                     <i class="fa-solid fa-shield-halved text-xl"></i>
                 </div>
                 <div>
-                    <span class="font-extrabold text-xl tracking-tight block text-white">FIXED MATCHES<span style="color: #1E88E5;"> - CHECKER</span></span>
-                    <span class="text-[10px] tracking-widest text-slate-400 uppercase font-extrabold block -mt-1">Football Betting Tips & Analysis</span>
+                    <span class="font-black text-xl tracking-tight block text-white">FIXED MATCHES<span class="text-blue-400"> - CHECKER</span></span>
+                    <span class="text-[10px] tracking-widest text-slate-300 uppercase font-extrabold block -mt-1">Institutional Football Analytics</span>
                 </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-6 font-semibold text-sm">
-                <a href="#hero" class="text-slate-300 hover:text-blue-400 transition-colors py-2 border-b-2 border-transparent hover:border-blue-400">
-                    <i class="fa-solid fa-house-medical mr-1.5"></i>Home
+            <nav class="hidden lg:flex items-center gap-7 font-bold text-xs uppercase tracking-wider">
+                <a href="#hero" class="text-slate-200 hover:text-blue-400 transition-colors py-2 border-b-2 border-transparent hover:border-blue-400">
+                    <i class="fa-solid fa-house-medical mr-1.5 text-blue-400"></i>Home
                 </a>
-                <a href="#double-bet-offer" class="text-slate-300 hover:text-amber-400 transition-colors py-2 border-b-2 border-transparent hover:border-amber-400">
+                <a href="#double-bet-offer" class="text-slate-200 hover:text-amber-400 transition-colors py-2 border-b-2 border-transparent hover:border-amber-400">
                     <i class="fa-solid fa-fire mr-1.5 text-amber-400"></i>Premium Double Offer
                 </a>
-                <a href="#vip-subscription" class="text-slate-300 hover:text-emerald-400 transition-colors py-2 border-b-2 border-transparent hover:border-emerald-400">
+                <a href="#vip-subscription" class="text-slate-200 hover:text-emerald-400 transition-colors py-2 border-b-2 border-transparent hover:border-emerald-400">
                     <i class="fa-solid fa-crown mr-1.5 text-emerald-400"></i>VIP Daily Subscription
                 </a>
-                <a href="#free-tips" class="text-slate-300 hover:text-blue-400 transition-colors py-2 border-b-2 border-transparent hover:border-blue-400">
-                    <i class="fa-solid fa-chart-line mr-1.5"></i>Free Betting Tips
+                <a href="#free-tips" class="text-slate-200 hover:text-blue-400 transition-colors py-2 border-b-2 border-transparent hover:border-blue-400">
+                    <i class="fa-solid fa-chart-line mr-1.5 text-blue-400"></i>Free Tips
                 </a>
-                <a href="#faq" class="text-slate-300 hover:text-blue-400 transition-colors py-2 border-b-2 border-transparent hover:border-blue-400">
-                    <i class="fa-solid fa-circle-question mr-1.5"></i>FAQ
+                <a href="#faq" class="text-slate-200 hover:text-blue-400 transition-colors py-2 border-b-2 border-transparent hover:border-blue-400">
+                    <i class="fa-solid fa-circle-question mr-1.5 text-slate-300"></i>FAQ
                 </a>
             </nav>
 
-            <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-300 hover:text-white p-2" aria-label="Toggle Navigation Menu">
-                <i id="menuIcon" class="fa-solid fa-bars text-2xl"></i>
+            <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-200 hover:text-white p-2.5 rounded-xl bg-slate-800 border border-slate-700" aria-label="Toggle Navigation Menu">
+                <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
 
-        <div id="mobileMenu" class="hidden lg:hidden bg-trust-dark border-b border-trust-lightnavy transition-all duration-300">
-            <div class="px-4 pt-2 pb-6 space-y-3 font-semibold text-sm">
-                <a href="#hero" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300">Home</a>
-                <a href="#double-bet-offer" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg hover:bg-slate-800 text-amber-300"><i class="fa-solid fa-fire text-amber-400 mr-1.5"></i>Premium Double Offer</a>
-                <a href="#vip-subscription" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg hover:bg-slate-800 text-emerald-300"><i class="fa-solid fa-crown text-emerald-400 mr-1.5"></i>VIP Daily Subscription</a>
-                <a href="#free-tips" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300">Free Betting Tips</a>
-                <a href="#faq" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300">FAQ</a>
-                <a href="#vip-subscription" onclick="toggleMobileMenu()" class="block w-full text-center bg-emerald-600 text-white px-4 py-3 rounded-lg font-black shadow-md">
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#0e1626] border-b border-slate-700 transition-all duration-300">
+            <div class="px-4 pt-3 pb-6 space-y-3 font-bold text-xs uppercase tracking-wider">
+                <a href="#hero" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl hover:bg-slate-800 text-slate-200">Home</a>
+                <a href="#double-bet-offer" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl hover:bg-slate-800 text-amber-300"><i class="fa-solid fa-fire text-amber-400 mr-1.5"></i>Premium Double Offer</a>
+                <a href="#vip-subscription" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl hover:bg-slate-800 text-emerald-300"><i class="fa-solid fa-crown text-emerald-400 mr-1.5"></i>VIP Daily Subscription</a>
+                <a href="#free-tips" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl hover:bg-slate-800 text-slate-200">Free Betting Tips</a>
+                <a href="#faq" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl hover:bg-slate-800 text-slate-200">FAQ</a>
+                <a href="#vip-subscription" onclick="toggleMobileMenu()" class="block w-full text-center bg-gradient-to-r from-emerald-500 to-emerald-600 text-slate-950 px-4 py-3 rounded-xl font-black shadow-lg">
                     Get VIP Access
                 </a>
             </div>
@@ -216,40 +226,36 @@
 
     <main id="main-content" class="flex-grow">
         
-        <section id="hero" class="scroll-mt-20 relative bg-white text-slate-900 py-16 lg:py-20 overflow-hidden border-b border-slate-200">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(8,102,255,0.06),transparent_50%)]"></div>
-            <div class="absolute -top-40 right-0 w-96 h-96 bg-blue-800/5 rounded-full blur-3xl"></div>
-            
+        <section id="hero" class="scroll-mt-20 relative py-16 lg:py-24 overflow-hidden border-b border-slate-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="max-w-4xl mx-auto space-y-6 text-center">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-blue-500/15 text-blue-700 border border-blue-500/30 uppercase tracking-widest">
-                        <i class="fa-solid fa-chart-pie text-[10px] animate-pulse text-blue-600"></i> #1 Verified Quantitative Sports Platform
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black bg-blue-500/20 text-blue-300 border border-blue-400/40 uppercase tracking-widest shadow-sm">
+                        <i class="fa-solid fa-shield-check text-blue-400 animate-pulse"></i> Audited Quantitative Sports Intelligence
                     </span>
                     
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-slate-900">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
                         Verified Football Betting Tips, <br class="hidden sm:inline">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">Fixed Matches Research & Sure Predictions</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400">Fixed Matches Research & Predictions</span>
                     </h1>
                     
-                    <p class="text-slate-600 text-lg sm:text-xl max-w-3xl mx-auto font-light leading-relaxed">
+                    <p class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-medium leading-relaxed">
                         Looking for accurate <strong>football betting tips</strong>, reliable <strong>free betting tips</strong>, and verified <strong>fixed matches</strong> analysis? Our platform delivers quantitative soccer predictions powered by Expected Goals (xG), market movement tracking, and institutional sports analytics.
                     </p>
 
-                    <div class="pt-8 border-t border-slate-200 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-xs text-slate-500 font-semibold">
-                        <span><i class="fa-solid fa-futbol text-blue-600 mr-2"></i>Daily Free Football Betting Tips</span>
-                        <span><i class="fa-solid fa-shield-virus text-blue-600 mr-2"></i>Cryptographic Isolation</span>
-                        <span><i class="fa-solid fa-chart-line text-blue-600 mr-2"></i>High-Odds Sure Betting Tips</span>
+                    <div class="pt-6 border-t border-slate-700/80 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-slate-300 font-bold">
+                        <span><i class="fa-solid fa-futbol text-emerald-400 mr-2"></i>Daily Free Football Tips</span>
+                        <span><i class="fa-solid fa-lock text-blue-400 mr-2"></i>Cryptographic Isolation</span>
+                        <span><i class="fa-solid fa-chart-line text-amber-400 mr-2"></i>High-Odds Verified Picks</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="double-bet-offer" class="scroll-mt-20 bg-slate-950 text-white py-16 border-b border-slate-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(245,158,11,0.08),transparent_50%)]"></div>
+        <section id="double-bet-offer" class="scroll-mt-20 py-16 border-b border-slate-700 relative overflow-hidden bg-slate-900/60">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
                 
-                <div class="max-w-3xl mx-auto text-center space-y-4">
-                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/40 uppercase tracking-widest shadow-md">
+                <div class="max-w-3xl mx-auto text-center space-y-3">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-amber-500/20 text-amber-300 border border-amber-400/50 uppercase tracking-widest shadow-sm">
                         <i class="fa-solid fa-fire text-amber-400"></i> High-Odds Exclusive Match Ticket
                     </span>
                     
@@ -257,87 +263,85 @@
                         Premium Double Bet Offer
                     </h2>
 
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
-                        Our premium high-odds ticket features two carefully selected and mathematically backed high-value fixtures designed for massive returns.
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-medium">
+                        Our premium high-odds ticket features two carefully selected and mathematically backed high-value fixtures designed for maximum yields.
                     </p>
                 </div>
 
                 <!-- Saturday Special Ticket Offer Card -->
-                <div class="max-w-4xl mx-auto bg-gradient-to-r from-amber-950/90 via-slate-900 to-amber-950/90 rounded-3xl p-6 sm:p-8 border-2 border-amber-500/80 shadow-2xl relative overflow-hidden space-y-6">
-                    <div class="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                    
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-amber-500/30 pb-4">
-                        <div class="space-y-1">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-extrabold bg-amber-500 text-slate-950 uppercase tracking-widest shadow-md">
+                <div class="max-w-4xl mx-auto glass-card-amber rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden space-y-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-amber-500/40 pb-5">
+                        <div class="space-y-1.5">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-black bg-amber-400 text-slate-950 uppercase tracking-widest shadow-md">
                                 <i class="fa-solid fa-bolt text-slate-950"></i> Saturday Special Ticket Offer
                             </div>
                             <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight">PREMIUM DOUBLE BET OFFER</h3>
-                            <p class="text-xs text-amber-200/90 font-medium">Saturday, 17 October 2026 — 2 Confirmed High-Odds Fixtures</p>
+                            <p class="text-xs text-amber-200 font-bold">Saturday, 17 October 2026 — 2 Confirmed High-Odds Fixtures</p>
                         </div>
                         <div class="text-left md:text-right shrink-0">
-                            <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider block">Combined Ticket Odds</span>
-                            <span class="text-3xl sm:text-4xl font-black text-amber-400 font-mono-custom">+28.00 ODDS</span>
+                            <span class="text-[10px] uppercase font-black text-amber-400 tracking-wider block">Combined Ticket Odds</span>
+                            <span class="text-3xl sm:text-4xl font-black text-amber-300 font-mono-custom">+28.00 ODDS</span>
                         </div>
                     </div>
 
                     <div class="grid sm:grid-cols-3 gap-4 text-xs">
-                        <div class="bg-slate-900/90 p-3.5 rounded-xl border border-amber-500/30 space-y-1">
-                            <span class="text-amber-400 font-bold block"><i class="fa-solid fa-futbol mr-1"></i> Match 1 & Match 2</span>
-                            <p class="text-slate-300 text-[11px]">2 Rigorously analyzed high-value match selections.</p>
+                        <div class="bg-slate-900/90 p-4 rounded-2xl border border-amber-500/30 space-y-1">
+                            <span class="text-amber-400 font-bold block"><i class="fa-solid fa-futbol mr-1.5"></i> Match 1 & Match 2</span>
+                            <p class="text-slate-200 text-[11px] font-medium">Empoli vs Palermo & Jagiellonia vs Gornik Zabrze</p>
                         </div>
-                        <div class="bg-slate-900/90 p-3.5 rounded-xl border border-amber-500/30 space-y-1">
-                            <span class="text-emerald-400 font-bold block"><i class="fa-solid fa-chart-line mr-1"></i> Target Odds</span>
-                            <p class="text-slate-300 text-[11px]">28.00+ Total odds payout ratio ticket.</p>
+                        <div class="bg-slate-900/90 p-4 rounded-2xl border border-amber-500/30 space-y-1">
+                            <span class="text-emerald-400 font-bold block"><i class="fa-solid fa-chart-line mr-1.5"></i> Target Odds</span>
+                            <p class="text-slate-200 text-[11px] font-medium">28.00+ Total odds payout ratio ticket.</p>
                         </div>
-                        <div class="bg-slate-900/90 p-3.5 rounded-xl border border-amber-500/30 space-y-1">
-                            <span class="text-amber-400 font-bold block"><i class="fa-solid fa-shield-halved mr-1"></i> Full Security</span>
-                            <p class="text-slate-300 text-[11px]">Instant delivery via WhatsApp & Email.</p>
+                        <div class="bg-slate-900/90 p-4 rounded-2xl border border-amber-500/30 space-y-1">
+                            <span class="text-amber-400 font-bold block"><i class="fa-solid fa-shield-halved mr-1.5"></i> Direct Delivery</span>
+                            <p class="text-slate-200 text-[11px] font-medium">Instant delivery via WhatsApp & Email.</p>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
                         <div class="flex items-baseline gap-2">
-                            <span class="text-xs text-slate-400 uppercase font-bold">Ticket Price:</span>
+                            <span class="text-xs text-slate-300 uppercase font-bold">Ticket Price:</span>
                             <span class="text-3xl font-black text-white font-mono-custom">€170</span>
-                            <span class="text-xs text-amber-300 font-semibold">(One-time Saturday Ticket)</span>
+                            <span class="text-xs text-amber-300 font-semibold">(One-time Ticket Pass)</span>
                         </div>
-                        <button onclick="preselectSubPlan('Saturday Premium Double Bet (€170)', 170)" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 text-xs">
-                            <i class="fa-solid fa-ticket"></i> Get Saturday Premium Double Ticket (€170)
+                        <button onclick="preselectSubPlan('Saturday Premium Double Bet (€170)', 170)" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-2xl transition-all shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-ticket"></i> Get Saturday Ticket (€170)
                         </button>
                     </div>
                 </div>
 
                 <!-- Double Bet Archive Table -->
-                <div class="max-w-7xl mx-auto bg-[#151e36] p-6 rounded-3xl border border-amber-500/40 shadow-2xl space-y-4">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
-                        <div class="flex items-center gap-2.5">
-                            <div class="bg-amber-500 text-slate-950 p-2 rounded-xl text-base font-black">
+                <div class="max-w-7xl mx-auto glass-card p-6 rounded-3xl border border-slate-700 shadow-2xl space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-700 pb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-amber-500/20 text-amber-400 p-2.5 rounded-2xl border border-amber-500/40 text-base font-black">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
                             <div>
                                 <h4 class="text-lg font-black text-white tracking-tight">Premium Double Bet Archive</h4>
-                                <p class="text-xs text-amber-300/80 font-medium">Saturday, 10 October 2026 Ticket Results</p>
+                                <p class="text-xs text-slate-300 font-medium">Saturday Ticket Verification History</p>
                             </div>
                         </div>
-                        <span class="bg-emerald-950 text-emerald-300 text-xs font-bold px-3 py-1 rounded-xl border border-emerald-800 flex items-center gap-1.5 self-start sm:self-auto shrink-0">
-                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Total Odds: 33.15 (WON)
+                        <span class="bg-emerald-950/90 text-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-xl border border-emerald-600/80 flex items-center gap-1.5 self-start sm:self-auto shrink-0 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Total Odds: 13.44 (WON)
                         </span>
                     </div>
 
-                    <div class="overflow-x-auto rounded-2xl border border-slate-700 bg-slate-900/90 shadow-xl p-1">
-                        <table class="min-w-full divide-y divide-slate-800 text-left text-xs sm:text-sm">
-                            <thead class="bg-slate-800/80 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                    <div class="overflow-x-auto rounded-2xl border border-slate-700 bg-slate-900 shadow-xl p-1">
+                        <table class="min-w-full divide-y divide-slate-700 text-left text-xs sm:text-sm">
+                            <thead class="bg-slate-800 text-amber-300 text-[11px] font-black uppercase tracking-wider">
                                 <tr>
-                                    <th class="p-3.5">Event Date</th>
-                                    <th class="p-3.5">Tournament</th>
-                                    <th class="p-3.5">Fixture</th>
-                                    <th class="p-3.5">Pick</th>
-                                    <th class="p-3.5 text-center">Result</th>
-                                    <th class="p-3.5 text-center">Odds</th>
-                                    <th class="p-3.5 text-center">Outcome</th>
+                                    <th class="p-3.5 border-b border-slate-700">Event Date</th>
+                                    <th class="p-3.5 border-b border-slate-700">Tournament</th>
+                                    <th class="p-3.5 border-b border-slate-700">Fixture</th>
+                                    <th class="p-3.5 border-b border-slate-700">Pick</th>
+                                    <th class="p-3.5 text-center border-b border-slate-700">Result</th>
+                                    <th class="p-3.5 text-center border-b border-slate-700">Odds</th>
+                                    <th class="p-3.5 text-center border-b border-slate-700">Outcome</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-800 text-slate-200 font-semibold" id="doubleBetArchiveTableBody">
+                            <tbody class="divide-y divide-slate-700/80 text-slate-100 font-bold" id="doubleBetArchiveTableBody">
                             </tbody>
                         </table>
                     </div>
@@ -346,11 +350,11 @@
             </div>
         </section>
 
-        <section id="vip-subscription" class="scroll-mt-20 bg-slate-700 text-white py-16 border-b border-slate-600 relative overflow-hidden">
+        <section id="vip-subscription" class="scroll-mt-20 py-16 border-b border-slate-700 relative overflow-hidden bg-slate-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
                 
-                <div class="max-w-4xl mx-auto text-center space-y-4">
-                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase tracking-widest">
+                <div class="max-w-4xl mx-auto text-center space-y-3">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-300 border border-emerald-400/50 uppercase tracking-widest">
                         <i class="fa-solid fa-crown text-emerald-400"></i> VIP Daily Subscription & Passes
                     </span>
                     
@@ -358,7 +362,7 @@
                         VIP Daily Football Betting Tips
                     </h2>
 
-                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light max-w-3xl mx-auto">
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-medium max-w-3xl mx-auto">
                         Avoid internet scams promising unrealistic fixed match guarantees. Our VIP daily subscription service delivers calculated mathematical value selections, deep market data, and institutional sports intelligence.
                     </p>
                 </div>
@@ -366,47 +370,47 @@
                 <!-- Quant Analysis Explanation Block -->
                 <div class="space-y-6">
                     <div class="text-center space-y-2 max-w-3xl mx-auto">
-                        <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Advanced Data Pipeline</span>
-                        <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-white">How We Calculate Our Daily Winning Edge</h3>
+                        <span class="text-xs font-black tracking-widest text-emerald-400 uppercase">Advanced Data Pipeline</span>
+                        <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-white">How We Calculate Our Daily Edge</h3>
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-700 hover:border-emerald-500/60 transition-colors space-y-3">
-                            <div class="h-10 w-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-bold">
+                        <div class="glass-card p-6 rounded-3xl hover:border-blue-400 transition-colors space-y-3">
+                            <div class="h-10 w-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg font-bold border border-blue-400/40">
                                 <i class="fa-solid fa-user-xmark"></i>
                             </div>
-                            <h4 class="font-bold text-white text-base">Key Absentee Intel</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h4 class="font-black text-white text-base">Key Absentee Intel</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed font-medium">
                                 Real-time monitoring of injuries, tactical suspensions, playmaker absences, and team rotation strategies.
                             </p>
                         </div>
 
-                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-700 hover:border-emerald-500/60 transition-colors space-y-3">
-                            <div class="h-10 w-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                        <div class="glass-card p-6 rounded-3xl hover:border-emerald-400 transition-colors space-y-3">
+                            <div class="h-10 w-10 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold border border-emerald-400/40">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
-                            <h4 class="font-bold text-white text-base">Form & Advanced xG</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h4 class="font-black text-white text-base">Form & Advanced xG</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed font-medium">
                                 Expected Goals (xG), Expected Threat (xT), defensive efficiency indexes, and conversion metrics.
                             </p>
                         </div>
 
-                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-700 hover:border-emerald-500/60 transition-colors space-y-3">
-                            <div class="h-10 w-10 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center text-lg font-bold">
+                        <div class="glass-card p-6 rounded-3xl hover:border-amber-400 transition-colors space-y-3">
+                            <div class="h-10 w-10 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold border border-amber-400/40">
                                 <i class="fa-solid fa-building-columns"></i>
                             </div>
-                            <h4 class="font-bold text-white text-base">Financial Intelligence</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h4 class="font-black text-white text-base">Financial Intelligence</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed font-medium">
                                 Evaluating ownership stability, wage distributions, and motivation factors affecting match performance.
                             </p>
                         </div>
 
-                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-700 hover:border-emerald-500/60 transition-colors space-y-3">
-                            <div class="h-10 w-10 rounded-xl bg-violet-600/20 text-violet-400 flex items-center justify-center text-lg font-bold">
+                        <div class="glass-card p-6 rounded-3xl hover:border-indigo-400 transition-colors space-y-3">
+                            <div class="h-10 w-10 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg font-bold border border-indigo-400/40">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
-                            <h4 class="font-bold text-white text-base">Tournament Priorities</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h4 class="font-black text-white text-base">Tournament Priorities</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed font-medium">
                                 Tracking priority shifts: relegation threats, European fixture congestion, and domestic cup rotations.
                             </p>
                         </div>
@@ -416,87 +420,87 @@
                 <!-- VIP Daily Subscription Plans Grid -->
                 <div id="sub-plans" class="space-y-8 scroll-mt-24">
                     <div class="text-center space-y-2 max-w-3xl mx-auto">
-                        <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800">VIP Daily Membership</span>
+                        <span class="text-xs font-black tracking-widest text-emerald-300 uppercase bg-emerald-950 px-3.5 py-1 rounded-full border border-emerald-700">VIP Daily Membership</span>
                         <h3 class="text-3xl font-black tracking-tight text-white">Choose Your VIP Daily Subscription Plan</h3>
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-8">
                         <!-- Plan 1 -->
-                        <div class="bg-slate-900 rounded-3xl p-6 border border-slate-700 flex flex-col justify-between space-y-6 hover:border-blue-500 transition-all shadow-xl">
+                        <div class="glass-card rounded-3xl p-6 border border-slate-700 flex flex-col justify-between space-y-6 hover:border-blue-400 transition-all shadow-xl">
                             <div class="space-y-4">
-                                <div class="flex items-center justify-end border-b border-slate-800 pb-4">
-                                    <span class="bg-blue-900/60 text-blue-200 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-700">3 DAYS</span>
+                                <div class="flex items-center justify-end border-b border-slate-700 pb-4">
+                                    <span class="bg-blue-900/60 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-600/60">3 DAYS</span>
                                 </div>
                                 <div class="space-y-1">
                                     <h4 class="text-xl font-black text-white">3-Day VIP Pass</h4>
-                                    <p class="text-xs text-slate-400">Perfect for weekend football fixtures test-drive.</p>
+                                    <p class="text-xs text-slate-300 font-medium">Perfect for weekend football fixtures test-drive.</p>
                                 </div>
                                 <div class="flex items-baseline gap-1">
                                     <span class="text-4xl font-black text-white font-mono-custom">€45</span>
-                                    <span class="text-xs text-slate-400 font-mono-custom">/ 3 days (€15/day)</span>
+                                    <span class="text-xs text-slate-300 font-mono-custom">/ 3 days (€15/day)</span>
                                 </div>
-                                <ul class="space-y-2.5 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-slate-700 pt-4 font-semibold">
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Daily Pro Analyzed Selections</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Full xG & Absentee Intelligence</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Direct WhatsApp & Email Delivery</li>
                                 </ul>
                             </div>
-                            <button onclick="preselectSubPlan('3-Day VIP Pass (€45)', 45)" class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-extrabold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs">
+                            <button onclick="preselectSubPlan('3-Day VIP Pass (€45)', 45)" class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
                                 <i class="fa-solid fa-crown"></i> Select 3-Day Plan (€45)
                             </button>
                         </div>
 
                         <!-- Plan 2 -->
-                        <div class="bg-slate-900 rounded-3xl p-6 border-2 border-emerald-500 relative flex flex-col justify-between space-y-6 shadow-2xl scale-105 z-10">
-                            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-400 text-slate-950 font-black text-[9px] sm:text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-md whitespace-nowrap flex items-center gap-1">
+                        <div class="glass-card rounded-3xl p-6 border-2 border-emerald-400/90 relative flex flex-col justify-between space-y-6 shadow-2xl scale-105 z-10">
+                            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-400 to-emerald-500 text-slate-950 font-black text-[9px] sm:text-[10px] uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md whitespace-nowrap flex items-center gap-1">
                                 <i class="fa-solid fa-bolt text-xs"></i> MOST POPULAR CHOICE
                             </div>
                             <div class="space-y-4 pt-1">
-                                <div class="flex items-center justify-end border-b border-slate-800 pb-4">
-                                    <span class="bg-emerald-950 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-800">7 DAYS</span>
+                                <div class="flex items-center justify-end border-b border-slate-700 pb-4">
+                                    <span class="bg-emerald-950 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-700">7 DAYS</span>
                                 </div>
                                 <div class="space-y-1">
                                     <h4 class="text-xl font-black text-white">7-Day VIP Pass</h4>
-                                    <p class="text-xs text-slate-400">Complete weekly league coverage & accumulator tips.</p>
+                                    <p class="text-xs text-slate-300 font-medium">Complete weekly league coverage & accumulator tips.</p>
                                 </div>
                                 <div class="flex items-baseline gap-1">
                                     <span class="text-4xl font-black text-emerald-400 font-mono-custom">€75</span>
-                                    <span class="text-xs text-slate-400 font-mono-custom">/ 7 days (~€10.7/day)</span>
+                                    <span class="text-xs text-slate-300 font-mono-custom">/ 7 days (~€10.7/day)</span>
                                 </div>
-                                <ul class="space-y-2.5 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-slate-700 pt-4 font-semibold">
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> All Pro Analyzed Selections</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Full Club Politics & xG Intel</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Priority WhatsApp Direct Line</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 30% Savings vs Daily Rate</li>
                                 </ul>
                             </div>
-                            <button onclick="preselectSubPlan('7-Day VIP Pass (€75)', 75)" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 text-xs">
+                            <button onclick="preselectSubPlan('7-Day VIP Pass (€75)', 75)" class="w-full py-3.5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black rounded-2xl transition-all shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
                                 <i class="fa-solid fa-crown"></i> Select 7-Day Plan (€75)
                             </button>
                         </div>
 
                         <!-- Plan 3 -->
-                        <div class="bg-slate-900 rounded-3xl p-6 border border-slate-700 flex flex-col justify-between space-y-6 hover:border-amber-500 transition-all shadow-xl">
+                        <div class="glass-card rounded-3xl p-6 border border-slate-700 flex flex-col justify-between space-y-6 hover:border-amber-400 transition-all shadow-xl">
                             <div class="space-y-4">
-                                <div class="flex items-center justify-end border-b border-slate-800 pb-4">
-                                    <span class="bg-amber-950/80 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-800">15 DAYS</span>
+                                <div class="flex items-center justify-end border-b border-slate-700 pb-4">
+                                    <span class="bg-amber-950/80 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-700">15 DAYS</span>
                                 </div>
                                 <div class="space-y-1">
                                     <h4 class="text-xl font-black text-white">15-Day VIP Pass</h4>
-                                    <p class="text-xs text-slate-400">Maximum value for serious football handicappers.</p>
+                                    <p class="text-xs text-slate-300 font-medium">Maximum value for serious football handicappers.</p>
                                 </div>
                                 <div class="flex items-baseline gap-1">
                                     <span class="text-4xl font-black text-amber-400 font-mono-custom">€120</span>
-                                    <span class="text-xs text-slate-400 font-mono-custom">/ 15 days (€8/day)</span>
+                                    <span class="text-xs text-slate-300 font-mono-custom">/ 15 days (€8/day)</span>
                                 </div>
-                                <ul class="space-y-2.5 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-slate-700 pt-4 font-semibold">
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Premium VIP Picks Portfolio</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Complete Deep Intel & Market Alerts</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Priority WhatsApp & Email Delivery</li>
                                     <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Maximum 46% Discount Rate</li>
                                 </ul>
                             </div>
-                            <button onclick="preselectSubPlan('15-Day VIP Pass (€120)', 120)" class="w-full py-3.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs">
+                            <button onclick="preselectSubPlan('15-Day VIP Pass (€120)', 120)" class="w-full py-3.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
                                 <i class="fa-solid fa-crown"></i> Select 15-Day Plan (€120)
                             </button>
                         </div>
@@ -504,10 +508,10 @@
                 </div>
 
                 <!-- VIP Subscription Order Form -->
-                <div id="sub-order-section" class="max-w-4xl mx-auto bg-slate-900 p-6 md:p-8 rounded-3xl border-2 border-slate-700 shadow-2xl space-y-6 scroll-mt-24">
-                    <div class="flex items-center justify-between flex-wrap gap-2 border-b border-slate-800 pb-4">
+                <div id="sub-order-section" class="max-w-4xl mx-auto glass-card p-6 md:p-8 rounded-3xl border border-slate-700 shadow-2xl space-y-6 scroll-mt-24">
+                    <div class="flex items-center justify-between flex-wrap gap-2 border-b border-slate-700 pb-4">
                         <div>
-                            <span class="text-[10px] uppercase font-bold text-emerald-400 tracking-widest block">Direct Subscription Checkout</span>
+                            <span class="text-[10px] uppercase font-black text-emerald-400 tracking-widest block">Direct Subscription Checkout</span>
                             <h3 class="text-xl font-black text-white flex items-center gap-2">
                                 <i class="fa-solid fa-paper-plane text-emerald-400"></i> Subscribe To VIP Daily Betting Tips
                             </h3>
@@ -519,11 +523,11 @@
                         <input type="hidden" name="subject" value="New VIP Subscription Order - Fixed Matches Checker">
                         <input type="hidden" name="from_name" value="Fixed Matches Checker Portal">
                         <div>
-                            <label for="subSelectedPlan" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                            <label for="subSelectedPlan" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-1.5">
                                 1. Select Subscription Plan <span class="text-emerald-400">*</span>
                             </label>
                             <select id="subSelectedPlan" name="subscription_plan" required
-                                class="w-full bg-slate-950 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans cursor-pointer">
+                                class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans cursor-pointer">
                                 <option value="3-Day VIP Pass (€45)">3-Day VIP Subscription — €45</option>
                                 <option value="7-Day VIP Pass (€75)" selected>7-Day VIP Subscription — €75 (Most Popular)</option>
                                 <option value="15-Day VIP Pass (€120)">15-Day VIP Subscription — €120 (Best Value)</option>
@@ -531,36 +535,36 @@
                             </select>
                         </div>
                         <div>
-                            <label for="subEmail" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                            <label for="subEmail" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-1.5">
                                 2. Email Address <span class="text-emerald-400">*</span>
                             </label>
                             <input type="email" id="subEmail" name="email" required placeholder="your.email@example.com"
-                                class="w-full bg-slate-950 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans">
+                                class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans">
                         </div>
                         <div>
-                            <label for="subConfirmEmail" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                            <label for="subConfirmEmail" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-1.5">
                                 3. Confirm Email Address <span class="text-emerald-400">*</span>
                             </label>
                             <input type="email" id="subConfirmEmail" required placeholder="Re-enter your email address"
-                                class="w-full bg-slate-950 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans">
+                                class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans">
                         </div>
                         <div>
-                            <label for="subCrypto" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                            <label for="subCrypto" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-1.5">
                                 4. Select Preferred Settlement Asset <span class="text-emerald-400">*</span>
                             </label>
                             <select id="subCrypto" name="crypto_preference" required
-                                class="w-full bg-slate-950 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans cursor-pointer">
+                                class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 font-sans cursor-pointer">
                                 <option value="USDT (TRC20)">USDT (TRC20)</option>
                                 <option value="Bitcoin (BTC)">Bitcoin (BTC)</option>
                                 <option value="Ethereum (ETH)">Ethereum (ETH)</option>
                             </select>
                         </div>
 
-                        <div id="subOrderErrorMsg" class="hidden text-xs text-rose-400 font-bold bg-rose-950/50 border border-rose-800 p-3 rounded-xl flex items-center gap-2">
+                        <div id="subOrderErrorMsg" class="hidden text-xs text-rose-300 font-bold bg-rose-950/80 border border-rose-700/80 p-3.5 rounded-xl flex items-center gap-2">
                             <i class="fa-solid fa-circle-exclamation"></i> <span id="subOrderErrorText">Email addresses do not match!</span>
                         </div>
 
-                        <button type="submit" id="subOrderSubmitBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 text-sm">
+                        <button type="submit" id="subOrderSubmitBtn" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black py-3.5 px-6 rounded-2xl transition-all shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
                             <i class="fa-solid fa-crown"></i> Submit VIP Subscription Request
                         </button>
                     </form>
@@ -568,7 +572,7 @@
                     <div class="pt-2">
                         <div class="relative flex py-2 items-center">
                             <div class="flex-grow border-t border-slate-700"></div>
-                            <span class="flex-shrink mx-3 text-slate-400 text-xs font-bold uppercase tracking-widest">Or Instant WhatsApp Order</span>
+                            <span class="flex-shrink mx-3 text-slate-300 text-[10px] font-black uppercase tracking-widest">Or Instant WhatsApp Order</span>
                             <div class="flex-grow border-t border-slate-700"></div>
                         </div>
 
@@ -578,27 +582,27 @@
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </div>
                                 <div>
-                                    <span class="text-[10px] font-extrabold uppercase tracking-widest text-emerald-400 block">Instant VIP Activation</span>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-emerald-400 block">Instant VIP Activation</span>
                                     <span class="text-sm sm:text-base font-black text-white tracking-wide">Direct Encrypted WhatsApp Line</span>
                                 </div>
                             </div>
-                            <span class="bg-emerald-500 text-slate-950 text-xs font-black px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 shrink-0 group-hover:bg-emerald-400">
+                            <span class="bg-emerald-500 text-slate-950 text-xs font-black px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 shrink-0 group-hover:bg-emerald-400 uppercase tracking-wider">
                                 Chat Now <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </span>
                         </a>
                     </div>
 
-                    <div id="subOrderSuccessBox" class="hidden bg-emerald-950/70 border border-emerald-500/60 p-5 rounded-xl space-y-3">
-                        <div class="flex items-center gap-3 text-emerald-400">
-                            <div class="bg-emerald-800 text-white p-2.5 rounded-xl text-lg font-black">
+                    <div id="subOrderSuccessBox" class="hidden bg-emerald-950/80 border border-emerald-500/80 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-3 text-emerald-300">
+                            <div class="bg-emerald-700 text-white p-2.5 rounded-xl text-lg font-black">
                                 <i class="fa-solid fa-circle-check"></i>
                             </div>
                             <div>
-                                <h4 class="font-extrabold text-white text-base">VIP Subscription Request Received!</h4>
+                                <h4 class="font-black text-white text-base">VIP Subscription Request Received!</h4>
                                 <p class="text-xs text-emerald-200">Payment details dispatched</p>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-200 leading-relaxed">
+                        <p class="text-xs text-slate-100 leading-relaxed font-medium">
                             We have logged your subscription request for <strong id="subSuccessPlanDisplay" class="text-emerald-300 font-bold"></strong>! Instructions and settlement wallet addresses will be emailed to <strong id="subSuccessEmailDisplay" class="text-emerald-300 font-mono-custom"></strong> shortly.
                         </p>
                     </div>
@@ -608,30 +612,30 @@
                 <div class="space-y-6 pt-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700 pb-4">
                         <div>
-                            <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800 inline-flex items-center gap-1.5">
+                            <span class="text-xs font-black tracking-widest text-emerald-300 uppercase bg-emerald-950 px-3 py-1 rounded-full border border-emerald-700 inline-flex items-center gap-1.5">
                                 <i class="fa-solid fa-box-archive text-emerald-400"></i> VIP Match Archive
                             </span>
                             <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-white mt-2">VIP Daily Subscription History</h3>
                         </div>
-                        <span class="bg-emerald-950 text-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-xl border border-emerald-800/80 flex items-center gap-1.5 shrink-0 self-start md:self-auto shadow-sm">
+                        <span class="bg-emerald-950 text-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-xl border border-emerald-700 flex items-center gap-1.5 shrink-0 self-start md:self-auto shadow-sm">
                             <i class="fa-solid fa-circle-check text-emerald-400"></i> 100% Audited VIP Records
                         </span>
                     </div>
 
                     <div class="overflow-x-auto rounded-2xl border border-slate-700 bg-slate-900 shadow-2xl p-1">
-                        <table class="min-w-full divide-y divide-slate-800 text-left text-xs sm:text-sm">
-                            <thead class="bg-slate-800 text-slate-300 text-[10px] font-bold uppercase tracking-wider">
+                        <table class="min-w-full divide-y divide-slate-700 text-left text-xs sm:text-sm">
+                            <thead class="bg-slate-800 text-slate-200 text-[11px] font-black uppercase tracking-wider">
                                 <tr>
-                                    <th class="p-4">Event Date</th>
-                                    <th class="p-4">Tournament</th>
-                                    <th class="p-4">Fixture</th>
-                                    <th class="p-4">Pick</th>
-                                    <th class="p-4 text-center">Result</th>
-                                    <th class="p-4 text-center">Odds</th>
-                                    <th class="p-4 text-center">Outcome</th>
+                                    <th class="p-4 border-b border-slate-700">Event Date</th>
+                                    <th class="p-4 border-b border-slate-700">Tournament</th>
+                                    <th class="p-4 border-b border-slate-700">Fixture</th>
+                                    <th class="p-4 border-b border-slate-700">Pick</th>
+                                    <th class="p-4 text-center border-b border-slate-700">Result</th>
+                                    <th class="p-4 text-center border-b border-slate-700">Odds</th>
+                                    <th class="p-4 text-center border-b border-slate-700">Outcome</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-800 text-slate-200 font-semibold" id="vipArchiveTableBody">
+                            <tbody class="divide-y divide-slate-700/80 text-slate-100 font-bold" id="vipArchiveTableBody">
                             </tbody>
                         </table>
                     </div>
@@ -640,17 +644,17 @@
             </div>
         </section>
 
-        <section id="free-tips" class="scroll-mt-20 bg-slate-50 py-12 text-slate-900 border-b border-slate-200">
+        <section id="free-tips" class="scroll-mt-20 py-16 text-slate-100 border-b border-slate-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
                 
                 <div class="text-center space-y-2 max-w-3xl mx-auto">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-blue-100 text-blue-700 border border-blue-200 uppercase tracking-widest">
-                        <i class="fa-solid fa-chart-line text-blue-600"></i> Daily Soccer Predictions
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black bg-blue-500/20 text-blue-300 border border-blue-400/40 uppercase tracking-widest">
+                        <i class="fa-solid fa-chart-line text-blue-400"></i> Daily Soccer Predictions
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                    <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white leading-tight">
                         Daily Free Football Betting Tips & Value Selections
                     </h2>
-                    <p class="text-slate-600 font-light text-sm sm:text-base leading-relaxed">
+                    <p class="text-slate-300 font-medium text-sm sm:text-base leading-relaxed">
                         Access audited <strong>free betting tip</strong> choices and expert football picks updated daily by our quantitative modeling team.
                     </p>
                 </div>
@@ -658,19 +662,19 @@
                 <!-- Banner Ads Section 1 -->
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                        <a href="https://alvaro-fixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://alvaro-fixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://alvaro-fixed.com/wp-content/uploads/2024/02/baner.gif" alt="Alvaro Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://betfixedmatch.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://betfixedmatch.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://betfixedmatch.com/wp-content/uploads/2024/11/banner-fixed.gif" alt="Bet Fixed Matches Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://england-fixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://england-fixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://england-fixed.com/wp-content/uploads/2025/04/MARTINKOCJHEBANERDOSADNI-1.gif" alt="England Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://campo-betting.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://campo-betting.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://daily-fixed.com/wp-content/uploads/2026/04/campo-betting.gif" alt="Campo Betting Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://stakefixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://stakefixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://stakefixed.com/wp-content/uploads/2023/08/banner.gif" alt="Stake Fixed Betting Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
@@ -679,19 +683,19 @@
                 <!-- Banner Ads Section 2 -->
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                        <a href="https://chelsea-bet.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://chelsea-bet.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://chelsea-bet.com/wp-content/uploads/2021/09/fixed-matches-chelsea-bet.gif" alt="Chelsea Bet Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://solopredict.tips/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://solopredict.tips/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://solopredict.tips/wp-content/uploads/2025/12/solopredict.gif" alt="Solo Predict Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://norway-pick.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://norway-pick.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://norway-pick.com/wp-content/uploads/2025/12/NORWAY-PICK-FIXED-MATCH.gif" alt="Norway Pick Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                         <a href="https://football-fixed-match.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                         <a href="https://football-fixed-match.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://football-fixed-match.com/wp-content/uploads/2025/12/football-fixed-match.gif" alt="Football Fixed Match Predictions" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                         <a href="https://statarea-predictions.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                         <a href="https://statarea-predictions.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://statarea-predictions.com/wp-content/uploads/statarea-fixed-matches-predictions.gif" alt="Statarea Football Predictions" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
@@ -700,37 +704,37 @@
                 <!-- Banner Ads Section 3 -->
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                        <a href="https://fixedmatch.fun/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://fixedmatch.fun/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/xuahg9Y.gif" alt="Fixed Match Fun" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://bet-odd.net/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://bet-odd.net/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/WrP4ZPP.gif" alt="Bet Odd Net Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://golden-chance.org/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://golden-chance.org/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/0NOYxga.gif" alt="Golden Chance Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://www.tips-free.org/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://www.tips-free.org/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/hjIpX0c.gif" alt="Tips Free Football" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://betting-king.org/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://betting-king.org/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/FGpFC0R.gif" alt="Betting King Predictions" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
 
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                        <a href="https://www.fixed-bet1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://www.fixed-bet1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/3VgdRXm.gif" alt="Fixed Bet 1x2" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://www.bet365-professional.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://www.bet365-professional.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/JJAHOMn.gif" alt="Bet365 Professional Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://fixed-odds1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://fixed-odds1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/oTa0Qd3.gif" alt="Fixed Odds 1x2 Predictions" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://vip-fixed-bet.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://vip-fixed-bet.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/70JCw6V.gif" alt="VIP Fixed Bet" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://europeprobetting.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://europeprobetting.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/4dldVQt.gif" alt="Europe Pro Betting Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
@@ -738,10 +742,10 @@
 
                 <!-- Odds Switcher Controls -->
                 <div class="flex justify-center pt-1">
-                    <div class="inline-flex bg-slate-200 p-1 rounded-xl border border-slate-300 shadow-sm">
-                        <button onclick="setOddsFormat('decimal')" id="btnOddsDec" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-white text-slate-900 shadow-sm">Decimal</button>
-                        <button onclick="setOddsFormat('fractional')" id="btnOddsFrac" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-950">Fractional</button>
-                        <button onclick="setOddsFormat('american')" id="btnOddsAmer" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-950">American</button>
+                    <div class="inline-flex bg-slate-900 p-1.5 rounded-2xl border border-slate-700 shadow-inner">
+                        <button onclick="setOddsFormat('decimal')" id="btnOddsDec" class="px-4 py-1.5 text-xs font-bold rounded-xl transition-all bg-blue-600 text-white shadow-md">Decimal</button>
+                        <button onclick="setOddsFormat('fractional')" id="btnOddsFrac" class="px-4 py-1.5 text-xs font-bold rounded-xl transition-all text-slate-300 hover:text-white">Fractional</button>
+                        <button onclick="setOddsFormat('american')" id="btnOddsAmer" class="px-4 py-1.5 text-xs font-bold rounded-xl transition-all text-slate-300 hover:text-white">American</button>
                     </div>
                 </div>
 
@@ -753,19 +757,19 @@
                 <!-- Banner Ads Section 4 -->
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                        <a href="https://www.hakan-tips.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://www.hakan-tips.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/pEorUnh.gif" alt="Hakan Betting Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://www.asian-picks.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://www.asian-picks.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/iZfZtqe.gif" alt="Asian Picks Predictions" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://www.england-bets.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://www.england-bets.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/0kkismY.gif" alt="England Bets Football" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                         <a href="https://greek1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                         <a href="https://greek1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://greek1x2.com/wp-content/uploads/2026/03/BannerGreek.gif" alt="Greek 1x2 Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                         <a href="https://www.soccerfixed.io/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                         <a href="https://www.soccerfixed.io/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/HPsKjLb.gif" alt="Soccer Fixed IO" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
@@ -773,19 +777,19 @@
 
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                         <a href="https://surefixedmatch.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                         <a href="https://surefixedmatch.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://darkweb-fixedmatches.com/wp-content/uploads/2025/12/sure-fixed-match.webp" alt="Sure Fixed Match" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://fixedmatches-1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://fixedmatches-1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://fixedmatches-1x2.com/wp-content/uploads/2025/12/FIXED-MATCHES-1X2-LOGO.gif" alt="Fixed Matches 1x2" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://guaranteedfixedmatch.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://guaranteedfixedmatch.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://guaranteedfixedmatch.com/wp-content/uploads/2025/12/GUARANTEED-FIXED-MATCH.gif" alt="Guaranteed Fixed Match" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                         <a href="https://fixedmatches-checker.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                         <a href="https://fixedmatches-checker.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/nR0C02F.gif" alt="Fixed Matches Checker Platform" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                         <a href="https://fixedmatches-checker.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                         <a href="https://fixedmatches-checker.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/nR0C02F.gif" alt="Fixed Matches Checker Intelligence" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
@@ -793,19 +797,19 @@
 
                  <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                        <a href="https://mega-match1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://mega-match1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/y69Qg3o.gif" alt="Mega Match 1x2" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://odd1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://odd1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://odd1x2.com/wp-content/uploads/2015/11/baner.gif" alt="Odd 1x2 Predictions" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://paok-tip.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://paok-tip.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://paok-tip.com/wp-content/uploads/2014/09/paok-tip-baner.gif" alt="PAOK Football Tip" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://betwin-365.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://betwin-365.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.imgur.com/aycSxf5.gif" alt="Betwin 365" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://bale-1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://bale-1x2.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://bale-1x2.com/baner/bale-baner.gif" alt="Bale 1x2 Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
@@ -813,50 +817,50 @@
 
                 <div class="max-w-5xl mx-auto w-full my-4 space-y-2 sm:space-y-3 md:space-y-4">
                     <div class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 items-center justify-center">
-                        <a href="https://verified-tipsters.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://verified-tipsters.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://verified-tipsters.com/banner.svg" alt="Verified Tipster" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://daily-fixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://daily-fixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://daily-fixed.com/wp-content/uploads/2026/04/dragabanerdosaden2.gif" alt="Daily Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://davidfixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://davidfixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://davidfixed.com/wp-content/uploads/2021/02/david-fixed-banner.gif" alt="David Fixed Tips" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://arsenalfixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://arsenalfixed.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://arsenalfixed.com/wp-content/uploads/2022/12/arsenal.gif" alt="Arsenal Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
-                        <a href="https://bolivia-pick.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
+                        <a href="https://bolivia-pick.com/" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[3/1] bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all group p-1 flex items-center justify-center">
                             <img src="https://i.ibb.co/SP4SgTV/5Yb2xJO.gif" alt="Bolivia Pick Fixed Matches" class="w-full h-full object-contain" referrerpolicy="no-referrer">
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 space-y-6 shadow-md">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+                <div class="glass-card rounded-3xl p-6 md:p-8 space-y-6 shadow-xl border border-slate-700">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700 pb-4">
                         <div>
-                            <h3 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
-                                <i class="fa-solid fa-clock-rotate-left text-blue-600"></i> Free Football Betting Tips Archive & Audited Records
+                            <h3 class="text-lg sm:text-xl font-black text-white flex items-center gap-2">
+                                <i class="fa-solid fa-clock-rotate-left text-blue-400"></i> Free Football Betting Tips Archive & Audited Records
                             </h3>
                         </div>
-                        <span class="bg-blue-50 text-blue-700 text-xs font-bold px-3.5 py-1.5 rounded-xl border border-blue-200 flex items-center gap-1.5 shrink-0 self-start md:self-auto shadow-sm">
-                            <i class="fa-solid fa-square-check text-blue-600"></i> Verified Tips Record
+                        <span class="bg-blue-950 text-blue-300 text-xs font-bold px-3.5 py-1.5 rounded-xl border border-blue-700 flex items-center gap-1.5 shrink-0 self-start md:self-auto shadow-sm">
+                            <i class="fa-solid fa-square-check text-blue-400"></i> Verified Tips Record
                         </span>
                     </div>
 
-                    <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
-                        <table class="min-w-full divide-y divide-slate-200 text-left text-xs sm:text-sm">
-                            <thead class="bg-slate-50 text-slate-700 text-[10px] font-bold uppercase tracking-wider">
+                    <div class="overflow-x-auto rounded-2xl border border-slate-700 bg-slate-900 shadow-sm">
+                        <table class="min-w-full divide-y divide-slate-700 text-left text-xs sm:text-sm">
+                            <thead class="bg-slate-800 text-slate-200 text-[11px] font-black uppercase tracking-wider">
                                 <tr>
-                                    <th class="p-4">Event Date</th>
-                                    <th class="p-4">Tournament</th>
-                                    <th class="p-4">Fixture</th>
-                                    <th class="p-4">Pick</th>
-                                    <th class="p-4 text-center">Result</th>
-                                    <th class="p-4 text-center">Odds</th>
-                                    <th class="p-4 text-center">Outcome</th>
+                                    <th class="p-4 border-b border-slate-700">Event Date</th>
+                                    <th class="p-4 border-b border-slate-700">Tournament</th>
+                                    <th class="p-4 border-b border-slate-700">Fixture</th>
+                                    <th class="p-4 border-b border-slate-700">Pick</th>
+                                    <th class="p-4 text-center border-b border-slate-700">Result</th>
+                                    <th class="p-4 text-center border-b border-slate-700">Odds</th>
+                                    <th class="p-4 text-center border-b border-slate-700">Outcome</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-150 text-slate-600 font-semibold" id="tableArchiveBody">
+                            <tbody class="divide-y divide-slate-700/80 text-slate-200 font-bold" id="tableArchiveBody">
                             </tbody>
                         </table>
                     </div>
@@ -865,40 +869,40 @@
             </div>
         </section>
 
-        <section id="faq" class="scroll-mt-20 bg-white py-16 text-slate-900 border-b border-slate-200">
+        <section id="faq" class="scroll-mt-20 py-16 text-slate-100 border-b border-slate-700 bg-slate-900/40">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center space-y-2">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-blue-100 text-blue-700 border border-blue-200 uppercase tracking-widest">
-                        <i class="fa-solid fa-circle-question text-blue-600"></i> Knowledge Base
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black bg-blue-500/20 text-blue-300 border border-blue-400/40 uppercase tracking-widest">
+                        <i class="fa-solid fa-circle-question text-blue-400"></i> Knowledge Base
                     </span>
-                    <h2 class="text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
-                    <p class="text-slate-600 text-sm">Everything you need to know about VIP daily subscriptions and premium double offers.</p>
+                    <h2 class="text-3xl font-black text-white">Frequently Asked Questions</h2>
+                    <p class="text-slate-300 text-sm font-medium">Everything you need to know about VIP daily subscriptions and premium double offers.</p>
                 </div>
 
                 <div class="space-y-4">
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
-                        <h3 class="font-extrabold text-slate-900 text-base flex items-center gap-2">
-                            <i class="fa-solid fa-circle-info text-blue-600"></i> What is the difference between Premium Double Offer & VIP Daily Subscription?
+                    <div class="glass-card border border-slate-700 rounded-2xl p-6 space-y-2">
+                        <h3 class="font-black text-white text-base flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info text-blue-400"></i> What is the difference between Premium Double Offer & VIP Daily Subscription?
                         </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
                             The <strong>Premium Double Offer</strong> is a high-odds target ticket (+28.00 odds) featuring 2 premium match picks delivered for specific game days like Saturdays. The <strong>VIP Daily Subscription</strong> grants continuous daily access (3, 7, or 15 days) to all calculated pro selections, xG intelligence, and direct advisor access.
                         </p>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
-                        <h3 class="font-extrabold text-slate-900 text-base flex items-center gap-2">
-                            <i class="fa-solid fa-circle-info text-blue-600"></i> Where can I access free football betting tips today?
+                    <div class="glass-card border border-slate-700 rounded-2xl p-6 space-y-2">
+                        <h3 class="font-black text-white text-base flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info text-blue-400"></i> Where can I access free football betting tips today?
                         </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
                             We publish daily audited free betting tips right on our portal. Every single tip, odds movement, and match outcome is recorded transparently in our history tables.
                         </p>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
-                        <h3 class="font-extrabold text-slate-900 text-base flex items-center gap-2">
-                            <i class="fa-solid fa-circle-info text-blue-600"></i> What makes your sure betting tips effective?
+                    <div class="glass-card border border-slate-700 rounded-2xl p-6 space-y-2">
+                        <h3 class="font-black text-white text-base flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info text-blue-400"></i> What makes your sure betting tips effective?
                         </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
                             Our selections rely on statistical probability indexes, squad rotation monitoring, team financial incentives, and sharp market line movements to maximize long-term profitability.
                         </p>
                     </div>
@@ -906,25 +910,25 @@
             </div>
         </section>
 
-        <section id="privacy-operations" class="scroll-mt-20 bg-slate-100 py-16 text-slate-800">
+        <section id="privacy-operations" class="scroll-mt-20 py-16 text-slate-100">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
-                <div class="bg-white rounded-3xl p-6 md:p-10 border border-slate-200 shadow-lg space-y-6">
-                    <div class="border-b border-slate-150 pb-4">
-                        <h2 class="text-2xl font-black text-slate-900 flex items-center gap-2">
-                            <i class="fa-solid fa-user-shield text-blue-600"></i> Operational Protocols & Privacy Regulations
+                <div class="glass-card rounded-3xl p-6 md:p-10 border border-slate-700 shadow-xl space-y-6">
+                    <div class="border-b border-slate-700 pb-4">
+                        <h2 class="text-2xl font-black text-white flex items-center gap-2">
+                            <i class="fa-solid fa-user-shield text-blue-400"></i> Operational Protocols & Privacy Regulations
                         </h2>
                     </div>
 
-                    <div class="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        <p class="font-bold text-slate-850">
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+                        <p class="font-bold text-slate-100">
                             Please review our standard procedures on security containment, anonymity models, and data encryption schemas below.
                         </p>
                         <div>
-                            <h4 class="font-extrabold text-slate-900 text-sm mb-1">1. Protecting Informants & Analytics</h4>
+                            <h4 class="font-black text-white text-sm mb-1">1. Protecting Informants & Analytics</h4>
                             <p>Our platform maintains structural separation between visiting users, client communication ports, and master ledger databases.</p>
                         </div>
                         <div>
-                            <h4 class="font-extrabold text-slate-900 text-sm mb-1">2. Cryptographic Transaction Standard</h4>
+                            <h4 class="font-black text-white text-sm mb-1">2. Cryptographic Transaction Standard</h4>
                             <p>By restricting premium access validation purely to decentralized networks (USDT, BTC, ETH), our team ensures absolute cryptographic isolation.</p>
                         </div>
                     </div>
@@ -934,20 +938,20 @@
 
     </main>
 
-    <footer class="bg-trust-dark text-slate-300 border-t border-trust-lightnavy py-12">
+    <footer class="bg-[#070c18] text-slate-300 border-t border-slate-700 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8 border-b border-trust-lightnavy pb-8 text-sm">
+            <div class="grid md:grid-cols-4 gap-8 mb-8 border-b border-slate-700 pb-8 text-sm">
                 <div class="space-y-4 col-span-2 md:col-span-1">
                     <div class="flex items-center gap-2">
-                        <div class="bg-blue-600 text-white p-2 rounded-lg">
+                        <div class="bg-blue-600 text-white p-2 rounded-xl">
                             <i class="fa-solid fa-shield-halved text-sm"></i>
                         </div>
-                        <span class="font-extrabold text-md tracking-tight text-white">FIXED MATCHES<span style="color: #1E88E5;"> - CHECKER</span></span>
+                        <span class="font-black text-md tracking-tight text-white">FIXED MATCHES<span class="text-blue-400"> - CHECKER</span></span>
                     </div>
                 </div>
                 <div>
-                    <h5 class="font-bold text-white text-xs uppercase tracking-wider mb-3 text-slate-150">Core Portal Routes</h5>
-                    <ul class="space-y-2 text-xs text-slate-400 font-semibold">
+                    <h5 class="font-black text-white text-xs uppercase tracking-wider mb-3">Core Portal Routes</h5>
+                    <ul class="space-y-2 text-xs text-slate-300 font-bold">
                         <li><a href="#hero" class="hover:text-blue-400 transition-colors">Home</a></li>
                         <li><a href="#double-bet-offer" class="hover:text-amber-400 transition-colors">Premium Double Offer</a></li>
                         <li><a href="#vip-subscription" class="hover:text-emerald-400 transition-colors">VIP Daily Subscription</a></li>
@@ -956,20 +960,20 @@
                     </ul>
                 </div>
                 <div>
-                    <h5 class="font-bold text-white text-xs uppercase tracking-wider mb-3 text-slate-150">Security & Analytics</h5>
-                    <ul class="space-y-2 text-xs text-slate-400 font-semibold">
+                    <h5 class="font-black text-white text-xs uppercase tracking-wider mb-3">Security & Analytics</h5>
+                    <ul class="space-y-2 text-xs text-slate-300 font-bold">
                         <li><a href="#privacy-operations" class="hover:text-blue-400 transition-colors">Privacy & Operations</a></li>
                         <li><a href="https://wa.me/441892710291" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition-colors"><i class="fa-brands fa-whatsapp text-sm mr-1.5"></i>WhatsApp Support</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="font-bold text-white text-xs uppercase tracking-wider mb-3 text-slate-150">Verification</h5>
-                    <div class="space-y-2 text-xs text-slate-400 font-semibold">
-                        <span class="block"><i class="fa-solid fa-lock text-blue-450 mr-1.5"></i> AES-256 SSL Encrypted Host</span>
+                    <h5 class="font-black text-white text-xs uppercase tracking-wider mb-3">Verification</h5>
+                    <div class="space-y-2 text-xs text-slate-300 font-bold">
+                        <span class="block"><i class="fa-solid fa-lock text-blue-400 mr-1.5"></i> AES-256 SSL Encrypted Host</span>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 space-y-4 md:space-y-0 font-medium">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 space-y-4 md:space-y-0 font-bold">
                 <p>&copy; 2026 Fixed Matches Checker. Verified Free Football Betting Tips & Sure Predictions Analytics.</p>
             </div>
         </div>
@@ -987,32 +991,22 @@
         }
 
         const doubleBetData = [
-            { date: "10 October, 2026", league: "Italy: Serie B", match: "Empoli vs Palermo", market: "Over/Under 5.5", pick: "Over 5.5", result: "2:4", odds: 13.00, status: "WON" },
-            { date: "10 October, 2026", league: "Poland: Ekstraklasa", match: "Jagiellonia vs Gornik Zabrze", market: "Match Winner (2)", pick: "Gornik Zabrze", result: "1:3", odds: 2.55, status: "WON" },
+            { date: "17 October, 2026", league: "Italy: Serie B", match: "Empoli vs Palermo", market: "Over/Under 5.5", pick: "Over 5.5", result: "-:-", odds: 11.00, status: "PENDING" },
+            { date: "17 October, 2026", league: "Poland: Ekstraklasa", match: "Jagiellonia vs Gornik Zabrze", market: "Match Winner (2)", pick: "Gornik Zabrze", result: "-:-", odds: 2.55, status: "PENDING" },
+            { date: "10 October, 2026", league: "Italy: Serie B", match: "Pisa vs Cremonese", market: "Match Winner & Goals", pick: "Pisa & Over 2.5", result: "3:1", odds: 4.20, status: "WON" },
+            { date: "10 October, 2026", league: "Germany: 2. Bundesliga", match: "Greuther Furth vs E. Braunschweig", market: "HT/FT", pick: "Greuther Furth/Greuther Furth (1/1)", result: "1:0 / 2:0", odds: 3.20, status: "WON" },
             { date: "30 September, 2026", league: "Bolivia: Copa Pacena", match: "Aurora vs SA Bulo Bulo", market: "HT/FT", pick: "Draw/Draw (X/X HT/FT)", result: "1:1 / 2:2", odds: 9.50, status: "WON" },
-            { date: "30 September, 2026", league: "Spain: Copa Federacion", match: "Navalcarnero vs Murcia", market: "Match Winner (1)", pick: "Navalcarnero", result: "3:1", odds: 3.40, status: "WON" },
-            { date: "26 September, 2026", league: "England: League Two", match: "Newport vs Grimsby", market: "HT/FT", pick: "Draw/Newport (X/1 HT/FT)", result: "0:0 / 2:1", odds: 9.00, status: "WON" },
-            { date: "26 September, 2026", league: "Serbia: Mozzart Bet Prva Liga", match: "Borac 1926 vs TSC", market: "Over/Under 3.5", pick: "Over 3.5", result: "2:2", odds: 3.70, status: "WON" },
-            { date: "23 September, 2026", league: "Bosnia & Herzegovina: Prva Liga", match: "Majevica vs Laktasi", market: "Match Winner (1)", pick: "Majevica", result: "1:1", odds: 9.50, status: "LOST" },
-            { date: "23 September, 2026", league: "Netherlands: KNVB Beker", match: "Sparta Nijkerk vs UDI '19", market: "Match & Goals", pick: "Sparta Nijkerk & Over 2.5", result: "3:1", odds: 2.70, status: "WON" },
-            { date: "19 September, 2026", league: "Poland: Division 1", match: "Grodzisk M. vs LKS Lodz", market: "HT/FT", pick: "Grodzisk M./Grodzisk M. (1/1 HT/FT)", result: "1:0 / 2:0", odds: 5.50, status: "WON" },
-            { date: "19 September, 2026", league: "Turkey: 1. Lig", match: "Keciorengucu vs Sivasspor", market: "HT/FT", pick: "Draw/Draw (X/X HT/FT)", result: "0:0 / 1:1", odds: 6.50, status: "WON" },
-            { date: "16 September, 2026", league: "Germany: 3. Liga", match: "Preussen Munster vs Saarbrucken", market: "Over/Under 5.5", pick: "Over 5.5", result: "3:3", odds: 9.00, status: "WON" },
-            { date: "16 September, 2026", league: "Serbia: Prva Liga", match: "Smederevo vs Sp. Subotica", market: "Match Winner (1)", pick: "Smederevo", result: "3:1", odds: 2.50, status: "WON" },
-            { date: "12 September, 2026", league: "Romania: Liga 2", match: "CS Din. Bucuresti vs Concordia", market: "Over/Under 5.5", pick: "Over 5.5", result: "2:5", odds: 5.50, status: "WON" },
-            { date: "12 September, 2026", league: "Germany: 3. Liga", match: "RW Essen vs Wurzburger Kickers", market: "Over/Under 4.5", pick: "Over 4.5", result: "6:2", odds: 4.33, status: "WON" },
-            { date: "09 September, 2026", league: "Kosovo: Superliga", match: "Feronikeli vs Drita", market: "Match Winner (1)", pick: "Feronikeli", result: "1:0", odds: 6.28, status: "WON" },
-            { date: "09 September, 2026", league: "Kosovo: Superliga", match: "Gjilani vs FC Ballkani", market: "Match Winner (1)", pick: "Gjilani", result: "1:0", odds: 3.25, status: "WON" },
-            { date: "05 September, 2026", league: "France: National", match: "Fleury-Merogis vs Villefranche", market: "Over/Under 5.5", pick: "Over 5.5", result: "4:2", odds: 5.84, status: "WON" },
-            { date: "05 September, 2026", league: "Norway: OBOS-ligaen", match: "Asane vs Hodd", market: "Match Result (X)", pick: "Draw (X)", result: "2:2", odds: 3.40, status: "WON" },
-            { date: "02 September, 2026", league: "Saudi Arabia: Division 1", match: "Hajer vs Al Anwar", market: "Match Result (X)", pick: "Draw (X)", result: "1:1", odds: 3.44, status: "WON" },
-            { date: "02 September, 2026", league: "Greece: Greek Cup", match: "PAOK vs OFI Crete", market: "Match Result (X)", pick: "Draw (X)", result: "0:0", odds: 4.55, status: "WON" },
-            { date: "29 August, 2026", league: "Turkey: 1. Lig", match: "Istanbulspor AS vs Karagumruk", market: "HT/FT", pick: "Draw/Draw (X/X HT/FT)", result: "1:1 / 1:1", odds: 5.50, status: "WON" },
-            { date: "29 August, 2026", league: "Italy: Serie B", match: "Sampdoria vs Juve Stabia", market: "Match Winner (2)", pick: "Juve Stabia", result: "1:2", odds: 4.75, status: "WON" }
+            { date: "30 September, 2026", league: "Spain: Copa Federacion", match: "Navalcarnero vs Murcia", market: "Match Winner (1)", pick: "Navalcarnero", result: "3:1", odds: 3.40, status: "WON" }
         ];
 
         const vipTipsData = [
-            { date: "15 October, 2026", league: "Europe: Conference League", match: "Lugano vs Crvena zvezda", market: "Match Winner (1)", pick: "Lugano", result: "3:2", odds: 2.00, status: "WON" },
+            { date: "21 October, 2026", league: "Europe: Conference League", match: "Lugano vs Crvena zvezda", market: "Match Winner (1)", pick: "Lugano", result: "3:2", odds: 2.00, status: "WON" },
+            { date: "20 October, 2026", league: "Germany: 3. Liga", match: "Aue vs Saarbrucken", market: "Match Winner (1)", pick: "Aue", result: "2:1", odds: 2.15, status: "WON" },
+            { date: "19 October, 2026", league: "Italy: Serie B", match: "Monza vs Cagliari", market: "Match Result (X)", pick: "Draw (X)", result: "1:1", odds: 3.20, status: "WON" },
+            { date: "18 October, 2026", league: "Spain: LaLiga2", match: "Eibar vs Castellon", market: "Match Winner (1)", pick: "Eibar", result: "2:0", odds: 1.95, status: "WON" },
+            { date: "17 October, 2026", league: "France: Ligue 2", match: "Rodez vs Annecy", market: "Over/Under 2.5", pick: "Over 2.5", result: "3:1", odds: 1.85, status: "WON" },
+            { date: "16 October, 2026", league: "Turkey: 1. Lig", match: "Keciorengucu vs Sariyer", market: "Match Winner (1)", pick: "Keciorengucu", result: "3:0", odds: 2.15, status: "WON" },
+            { date: "15 October, 2026", league: "Belarus: Vysshaya Liga", match: "Dinamo Minsk vs Slavia Mozyr", market: "Match Winner (1)", pick: "Dinamo Minsk", result: "3:1", odds: 1.51, status: "WON" },
             { date: "14 October, 2026", league: "Norway: OBOS-ligaen", match: "Moss vs Egersund", market: "Match Result (X)", pick: "Draw (X)", result: "0:0", odds: 3.70, status: "WON" },
             { date: "13 October, 2026", league: "England: EFL Trophy", match: "Gillingham vs Brighton U21", market: "Match Winner (1)", pick: "Gillingham", result: "4:3", odds: 2.55, status: "WON" },
             { date: "12 October, 2026", league: "Turkey: Super Lig", match: "Eyupspor vs Goztepe", market: "HT/FT", pick: "Goztepe/Goztepe (2/2 HT/FT)", result: "0:1 / 0:4", odds: 2.88, status: "WON" },
@@ -1071,8 +1065,10 @@
         ];
 
         const tipsData = [
-            { date: "October 16, 2026", league: "Germany: Bundesliga", match: "Eintracht Frankfurt vs FC Koln", market: "Over/Under 2.5", pick: "Over 2.5", result: "-:-", odds: 1.33, status: "PENDING" },
-            { date: "October 16, 2026", league: "France: Ligue 1", match: "Le Mans vs Toulouse", market: "Over/Under 2.5", pick: "Over 2.5", result: "-:-", odds: 1.43, status: "PENDING" },
+            { date: "October 22, 2026", league: "Europe: Europa League", match: "Juventus vs Rennes", market: "Match Winner (1)", pick: "Juventus", result: "-:-", odds: 1.38, status: "PENDING" },
+            { date: "October 22, 2026", league: "Europe: Europa League", match: "Ferencvaros vs Torreense", market: "Match Winner (1)", pick: "Ferencvaros", result: "-:-", odds: 1.30, status: "PENDING" },
+            { date: "October 16, 2026", league: "Germany: Bundesliga", match: "Eintracht Frankfurt vs FC Koln", market: "Over/Under 2.5", pick: "Over 2.5", result: "1:0", odds: 1.33, status: "LOST" },
+            { date: "October 16, 2026", league: "France: Ligue 1", match: "Le Mans vs Toulouse", market: "Over/Under 2.5", pick: "Over 2.5", result: "0:3", odds: 1.43, status: "WON" },
             { date: "October 15, 2026", league: "Belarus: Vysshaya Liga", match: "Din. Minsk vs Slavia Mozyr", market: "Match Winner (1)", pick: "Din. Minsk", result: "3:1", odds: 1.51, status: "WON" },
             { date: "October 15, 2026", league: "Europe: Conference League", match: "Panathinaikos vs Borac Banja Luka", market: "Match Winner (1)", pick: "Panathinaikos", result: "2:1", odds: 1.20, status: "WON" },
             { date: "October 14, 2026", league: "Europe: Champions League", match: "Feyenoord vs Como", market: "Both Teams To Score", pick: "Yes (BTTS)", result: "3:2", odds: 1.44, status: "WON" },
@@ -1175,8 +1171,8 @@
             const btnFrac = document.getElementById('btnOddsFrac');
             const btnAmer = document.getElementById('btnOddsAmer');
 
-            const activeClass = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-white text-slate-900 shadow-sm";
-            const inactiveClass = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-950";
+            const activeClass = "px-4 py-1.5 text-xs font-bold rounded-xl transition-all bg-blue-600 text-white shadow-md";
+            const inactiveClass = "px-4 py-1.5 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white";
 
             btnDec.className = format === 'decimal' ? activeClass : inactiveClass;
             btnFrac.className = format === 'fractional' ? activeClass : inactiveClass;
@@ -1191,10 +1187,10 @@
         function formatOdds(decimalOdds) {
             if (currentOddsFormat === 'fractional') {
                 const fracMap = {
-                    1.20: "1/5", 1.22: "2/9", 1.23: "23/100", 1.25: "1/4", 1.27: "27/100", 1.29: "2/7", 1.30: "3/10", 1.33: "1/3", 1.36: "9/25", 1.38: "4/11", 1.40: "2/5", 1.45: "9/20", 
-                    1.50: "1/2", 1.57: "57/100", 1.62: "31/50", 1.75: "3/4", 1.85: "17/20", 1.96: "24/25", 2.00: "1/1", 2.02: "51/50", 2.09: "109/100", 2.10: "11/10",
-                    2.14: "57/50", 2.20: "6/5", 2.26: "63/50", 2.30: "13/10", 2.50: "6/4", 2.55: "31/20", 2.57: "157/100",
-                    2.65: "33/20", 2.70: "17/10", 2.88: "47/25", 3.23: "223/100", 3.40: "12/5", 3.50: "5/2", 3.61: "261/100", 3.70: "27/10", 3.74: "137/50", 3.80: "14/5",
+                    1.20: "1/5", 1.22: "2/9", 1.23: "23/100", 1.25: "1/4", 1.27: "27/100", 1.29: "2/7", 1.30: "3/10", 1.33: "1/3", 1.36: "9/25", 1.38: "4/11", 1.40: "2/5", 1.43: "43/100", 1.45: "9/20", 
+                    1.50: "1/2", 1.51: "51/100", 1.57: "57/100", 1.62: "31/50", 1.75: "3/4", 1.85: "17/20", 1.95: "19/20", 1.96: "24/25", 2.00: "1/1", 2.02: "51/50", 2.09: "109/100", 2.10: "11/10",
+                    2.14: "57/50", 2.15: "23/20", 2.20: "6/5", 2.26: "63/50", 2.30: "13/10", 2.50: "6/4", 2.55: "31/20", 2.57: "157/100",
+                    2.65: "33/20", 2.70: "17/10", 2.88: "47/25", 3.20: "11/5", 3.23: "223/100", 3.40: "12/5", 3.50: "5/2", 3.61: "261/100", 3.70: "27/10", 3.74: "137/50", 3.80: "14/5",
                     4.20: "16/5", 4.23: "323/100", 4.55: "71/20", 4.75: "15/4", 5.13: "413/100", 5.50: "9/2", 9.00: "8/1", 9.50: "17/2", 11.00: "10/1", 13.00: "12/1"
                 };
                 return fracMap[decimalOdds] || (decimalOdds - 1).toFixed(2) + "/1";
@@ -1220,19 +1216,19 @@
             const todayTips = tipsData.filter(item => item.date === latestDate);
 
             const tipsHtml = todayTips.map(tip => `
-                <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-150 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="p-4 bg-slate-900 rounded-2xl border border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md">
                     <div>
-                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">${getLeagueWithIcon(tip.league)}</span>
-                        <h4 class="font-extrabold text-slate-900 text-base">${tip.match}</h4>
-                        <p class="text-xs text-blue-600 font-bold mt-0.5"><i class="fa-solid fa-bullseye mr-1"></i>Pick: ${tip.pick}</p>
+                        <span class="text-[10px] font-black text-blue-400 uppercase tracking-wider block">${getLeagueWithIcon(tip.league)}</span>
+                        <h4 class="font-black text-white text-base">${tip.match}</h4>
+                        <p class="text-xs text-emerald-400 font-extrabold mt-0.5"><i class="fa-solid fa-bullseye mr-1"></i>Pick: ${tip.pick}</p>
                     </div>
-                    <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-slate-200 pt-2 sm:pt-0 shrink-0 gap-1">
-                        ${tip.result !== '-:-' ? `<span class="text-xs font-mono-custom font-bold text-slate-700">FT: ${tip.result}</span>` : ''}
+                    <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-slate-800 pt-2 sm:pt-0 shrink-0 gap-1">
+                        ${tip.result !== '-:-' ? `<span class="text-xs font-mono-custom font-bold text-slate-200">FT: ${tip.result}</span>` : ''}
                         <div class="flex items-center gap-2">
-                            <span class="text-[10px] text-slate-400 uppercase font-bold">Odds</span>
-                            <span class="text-xl font-black text-slate-900 font-mono-custom">${formatOdds(tip.odds)}</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-extrabold">Odds</span>
+                            <span class="text-xl font-black text-amber-300 font-mono-custom">${formatOdds(tip.odds)}</span>
                         </div>
-                        ${tip.status !== 'PENDING' ? `<span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-black ${tip.status === 'WON' ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'}">${tip.status}</span>` : ''}
+                        ${tip.status !== 'PENDING' ? `<span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-black ${tip.status === 'WON' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-400/50' : 'bg-rose-500/20 text-rose-300 border border-rose-400/50'}">${tip.status}</span>` : ''}
                     </div>
                 </div>
             `).join('');
@@ -1240,16 +1236,16 @@
             const isPending = todayTips.some(t => t.status === 'PENDING');
             const allWon = todayTips.every(t => t.status === 'WON');
             const statusBadge = isPending 
-                ? `<span class="bg-amber-100 text-amber-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-clock text-amber-600"></i> PENDING</span>`
+                ? `<span class="bg-amber-500/20 text-amber-300 border border-amber-400/50 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-clock text-amber-400"></i> PENDING</span>`
                 : (allWon 
-                    ? `<span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-circle-check text-emerald-600"></i> ALL WON</span>`
-                    : `<span class="bg-slate-200 text-slate-800 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-flag-checkered text-slate-600"></i> COMPLETED</span>`);
+                    ? `<span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/50 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-circle-check text-emerald-400"></i> ALL WON</span>`
+                    : `<span class="bg-slate-800 text-slate-200 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-flag-checkered text-slate-300"></i> COMPLETED</span>`);
 
             container.innerHTML = `
-                <div class="bg-white rounded-3xl p-6 border-2 border-blue-500/80 shadow-xl space-y-4">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-3 flex-wrap gap-2">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-blue-50 text-blue-700 border border-blue-200">
-                            <i class="fa-solid fa-star text-amber-500"></i> ${latestDate} Free Betting Tips
+                <div class="glass-card rounded-3xl p-6 border border-blue-500/50 shadow-xl space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-700 pb-3 flex-wrap gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black bg-blue-500/20 text-blue-300 border border-blue-400/40">
+                            <i class="fa-solid fa-star text-amber-400"></i> ${latestDate} Free Betting Tips
                         </span>
                         ${statusBadge}
                     </div>
@@ -1265,16 +1261,58 @@
             const body = document.getElementById('tableArchiveBody');
             if (!body) return;
 
-            body.innerHTML = tipsData.map(item => `
-                <tr class="hover:bg-slate-50 transition-colors">
-                    <td class="p-4 whitespace-nowrap text-slate-500 text-xs">${item.date}</td>
-                    <td class="p-4 text-slate-700 text-xs font-bold">${getLeagueWithIcon(item.league)}</td>
-                    <td class="p-4 text-slate-900 font-extrabold">${item.match}</td>
-                    <td class="p-4 text-blue-600 font-bold">${item.pick}</td>
-                    <td class="p-4 text-center font-mono-custom font-bold text-slate-800">${item.result}</td>
-                    <td class="p-4 text-center font-mono-custom font-bold text-slate-900">${formatOdds(item.odds)}</td>
+            body.innerHTML = tipsData.map((item, idx) => `
+                <tr class="${idx % 2 === 0 ? 'bg-slate-900/90' : 'bg-slate-900/50'} hover:bg-slate-800 transition-colors">
+                    <td class="p-4 whitespace-nowrap text-slate-300 text-xs font-semibold">${item.date}</td>
+                    <td class="p-4 text-blue-400 text-xs font-bold">${getLeagueWithIcon(item.league)}</td>
+                    <td class="p-4 text-white font-extrabold">${item.match}</td>
+                    <td class="p-4 text-emerald-400 font-bold">${item.pick}</td>
+                    <td class="p-4 text-center font-mono-custom font-bold text-slate-100">${item.result}</td>
+                    <td class="p-4 text-center font-mono-custom font-bold text-amber-300">${formatOdds(item.odds)}</td>
                     <td class="p-4 text-center">
-                        <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-black ${item.status === 'WON' ? 'bg-emerald-100 text-emerald-800' : (item.status === 'PENDING' ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800')}">
+                        <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-black ${item.status === 'WON' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : (item.status === 'PENDING' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-rose-500/20 text-rose-300 border border-rose-500/40')}">
+                            ${item.status}
+                        </span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderVipArchive() {
+            const body = document.getElementById('vipArchiveTableBody');
+            if (!body) return;
+
+            body.innerHTML = vipTipsData.map((item, idx) => `
+                <tr class="${idx % 2 === 0 ? 'bg-slate-900/90' : 'bg-slate-900/50'} hover:bg-slate-800 transition-colors">
+                    <td class="p-4 whitespace-nowrap text-slate-300 text-xs font-semibold">${item.date}</td>
+                    <td class="p-4 text-emerald-400 text-xs font-bold">${item.league}</td>
+                    <td class="p-4 text-white font-extrabold">${item.match}</td>
+                    <td class="p-4 text-emerald-300 font-bold">${item.pick}</td>
+                    <td class="p-4 text-center font-mono-custom font-bold text-slate-100">${item.result}</td>
+                    <td class="p-4 text-center font-mono-custom font-bold text-amber-300">${formatOdds(item.odds)}</td>
+                    <td class="p-4 text-center">
+                        <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-black ${item.status === 'WON' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-rose-500/20 text-rose-300 border border-rose-500/40'}">
+                            ${item.status}
+                        </span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderDoubleBetArchive() {
+            const body = document.getElementById('doubleBetArchiveTableBody');
+            if (!body) return;
+
+            body.innerHTML = doubleBetData.map((item, idx) => `
+                <tr class="${idx % 2 === 0 ? 'bg-slate-900/90' : 'bg-slate-900/50'} hover:bg-slate-800 transition-colors">
+                    <td class="p-3.5 whitespace-nowrap text-slate-300 text-xs font-semibold">${item.date}</td>
+                    <td class="p-3.5 text-amber-300 text-xs font-bold">${item.league}</td>
+                    <td class="p-3.5 text-white font-extrabold">${item.match}</td>
+                    <td class="p-3.5 text-emerald-400 font-bold">${item.pick}</td>
+                    <td class="p-3.5 text-center font-mono-custom font-bold text-slate-100">${item.result}</td>
+                    <td class="p-3.5 text-center font-mono-custom font-bold text-amber-300">${formatOdds(item.odds)}</td>
+                    <td class="p-3.5 text-center">
+                        <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-black ${item.status === 'WON' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'}">
                             ${item.status}
                         </span>
                     </td>
@@ -1288,10 +1326,10 @@
 
             body.innerHTML = vipTipsData.map(item => `
                 <tr class="hover:bg-slate-800/60 transition-colors">
-                    <td class="p-4 whitespace-nowrap text-slate-400 text-xs">${item.date}</td>
+                    <td class="p-4 whitespace-nowrap text-slate-400 text-xs font-medium">${item.date}</td>
                     <td class="p-4 text-emerald-400 text-xs font-bold">${item.league}</td>
                     <td class="p-4 text-white font-extrabold">${item.match}</td>
-                    <td class="p-4 text-emerald-400 font-bold">${item.pick}</td>
+                    <td class="p-4 text-emerald-300 font-bold">${item.pick}</td>
                     <td class="p-4 text-center font-mono-custom font-bold text-slate-200">${item.result}</td>
                     <td class="p-4 text-center font-mono-custom font-bold text-white">${formatOdds(item.odds)}</td>
                     <td class="p-4 text-center">
@@ -1309,14 +1347,14 @@
 
             body.innerHTML = doubleBetData.map(item => `
                 <tr class="hover:bg-slate-800/50 transition-colors">
-                    <td class="p-3.5 whitespace-nowrap text-slate-400 text-xs">${item.date}</td>
+                    <td class="p-3.5 whitespace-nowrap text-slate-400 text-xs font-medium">${item.date}</td>
                     <td class="p-3.5 text-amber-300 text-xs font-bold">${item.league}</td>
                     <td class="p-3.5 text-white font-extrabold">${item.match}</td>
                     <td class="p-3.5 text-emerald-400 font-bold">${item.pick}</td>
                     <td class="p-3.5 text-center font-mono-custom font-bold text-slate-200">${item.result}</td>
                     <td class="p-3.5 text-center font-mono-custom font-bold text-amber-400">${formatOdds(item.odds)}</td>
                     <td class="p-3.5 text-center">
-                        <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-black bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-black ${item.status === 'WON' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'}">
                             ${item.status}
                         </span>
                     </td>
@@ -1380,7 +1418,7 @@
             if (!container) return;
 
             const toast = document.createElement('div');
-            toast.className = `p-4 rounded-xl shadow-xl text-xs font-extrabold text-white pointer-events-auto transition-all duration-300 transform translate-y-2 opacity-0 flex items-center gap-2 ${
+            toast.className = `p-4 rounded-xl shadow-2xl text-xs font-black text-white pointer-events-auto transition-all duration-300 transform translate-y-2 opacity-0 flex items-center gap-2.5 ${
                 type === 'success' ? 'bg-emerald-600' : (type === 'error' ? 'bg-rose-600' : 'bg-blue-600')
             }`;
             toast.innerHTML = `<i class="fa-solid ${type === 'success' ? 'fa-circle-check' : (type === 'error' ? 'fa-circle-exclamation' : 'fa-info-circle')}"></i> <span>${message}</span>`;
