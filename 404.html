@@ -324,7 +324,7 @@
                             </div>
                         </div>
                         <span class="bg-emerald-950/90 text-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-xl border border-emerald-600/80 flex items-center gap-1.5 self-start sm:self-auto shrink-0 shadow-sm">
-                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Total Odds: 13.44 (WON)
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Total Odds: 45.00 (WON)
                         </span>
                     </div>
 
@@ -1021,8 +1021,8 @@
 
         const vipTipsData = [
             { date: "22 October, 2026", league: "Bolivia: Division Profesional", match: "Real Potosi vs Bolivar", market: "Match Winner (1)", pick: "Real Potosi", result: "3:1", odds: 3.70, status: "WON" },
-            { date: "22 October, 2026", league: "Bolivia: Division Profesional", match: "Independiente vs Aurora", market: "Match Winner (1)", pick: "Independiente", result: "4:0", odds: 2.50, status: "WON" },
             { date: "21 October, 2026", league: "Colombia: Primera A", match: "Pereira vs Chico", market: "Match Winner (1)", pick: "Pereira", result: "2:0", odds: 2.20, status: "WON" },
+            { date: "20 October, 2026", league: "Bolivia: Division Profesional", match: "Independiente vs Aurora", market: "Match Winner (1)", pick: "Independiente", result: "4:0", odds: 2.50, status: "WON" },
             { date: "20 October, 2026", league: "Colombia: Primera A", match: "Llaneros vs Santa Fe", market: "Match Winner (1)", pick: "Llaneros", result: "1:0", odds: 2.90, status: "WON" },
             { date: "19 October, 2026", league: "Brazil: Serie B", match: "CRB vs Botafogo SP", market: "Match Winner (2)", pick: "Botafogo SP", result: "0:1", odds: 7.00, status: "WON" },
             { date: "18 October, 2026", league: "England: Championship", match: "Watford vs Charlton", market: "Match Winner (1)", pick: "Watford", result: "2:0", odds: 2.20, status: "WON" },
@@ -1210,10 +1210,10 @@
             if (currentOddsFormat === 'fractional') {
                 const fracMap = {
                     1.20: "1/5", 1.22: "2/9", 1.23: "23/100", 1.25: "1/4", 1.27: "27/100", 1.29: "2/7", 1.30: "3/10", 1.33: "1/3", 1.36: "9/25", 1.38: "4/11", 1.40: "2/5", 1.43: "43/100", 1.45: "9/20", 
-                    1.50: "1/2", 1.51: "51/100", 1.57: "57/100", 1.62: "31/50", 1.75: "3/4", 1.85: "17/20", 1.95: "19/20", 1.96: "24/25", 2.00: "1/1", 2.02: "51/50", 2.09: "109/100", 2.10: "11/10",
+                    1.50: "1/2", 1.51: "51/100", 1.53: "53/100", 1.57: "57/100", 1.62: "31/50", 1.75: "3/4", 1.85: "17/20", 1.95: "19/20", 1.96: "24/25", 2.00: "1/1", 2.02: "51/50", 2.09: "109/100", 2.10: "11/10",
                     2.14: "57/50", 2.15: "23/20", 2.20: "6/5", 2.26: "63/50", 2.30: "13/10", 2.50: "6/4", 2.55: "31/20", 2.57: "157/100",
                     2.65: "33/20", 2.70: "17/10", 2.88: "47/25", 3.20: "11/5", 3.23: "223/100", 3.40: "12/5", 3.50: "5/2", 3.61: "261/100", 3.70: "27/10", 3.74: "137/50", 3.80: "14/5",
-                    4.20: "16/5", 4.23: "323/100", 4.55: "71/20", 4.75: "15/4", 5.13: "413/100", 5.50: "9/2", 9.00: "8/1", 9.50: "17/2", 11.00: "10/1", 13.00: "12/1"
+                    4.20: "16/5", 4.23: "323/100", 4.55: "71/20", 4.75: "15/4", 5.13: "413/100", 5.50: "9/2", 6.00: "5/1", 9.00: "8/1", 9.50: "17/2", 11.00: "10/1", 13.00: "12/1"
                 };
                 return fracMap[decimalOdds] || (decimalOdds - 1).toFixed(2) + "/1";
             } else if (currentOddsFormat === 'american') {
